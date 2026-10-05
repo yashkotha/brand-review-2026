@@ -1,0 +1,1322 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<link rel="icon" href="logo.svg">
+<style>:root{color-scheme:light}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+</head>
+<body>
+<title>Zippyy Brand Audit</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Inter:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,500,1,0&display=block">
+<style>
+/* Layout: 1120px column, sticky tab nav, every section = heading row + visual first + short notes. Built in Zippyy's own brand: Lato headings, Inter text, coral used only for the one thing that matters. */
+:root{
+  --bg:#ffffff; --wash:#f6f4f3; --wash2:#efecea; --ink:#121212; --text:#2e2a28; --muted:#68615e; --hair:#e8e3e0;
+  --coral:#d54029; --coral-wash:#fbede9;
+  --hi:#a1271a; --hi-bg:#fbe9e6; --md:#8a5600; --md-bg:#fbf0db; --lo:#475467; --lo-bg:#edf0f3; --ok:#1d6a43; --ok-bg:#e6f2ea;
+  --shadow:0 1px 2px rgba(18,18,18,.05),0 10px 28px -14px rgba(18,18,18,.18);
+  --f-head:"Lato",system-ui,sans-serif; --f-body:"Inter",system-ui,sans-serif;
+  --r:16px; --r-sm:10px; --night:#121212;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#121212;--wash:#1b1a19;--wash2:#242220;--ink:#f4f1ef;--text:#e4dfdc;--muted:#a69e9a;--hair:#2e2b29;--coral:#ef5a41;--coral-wash:#2b1814;--hi:#f5a196;--hi-bg:#3a1915;--md:#f1c06e;--md-bg:#33260f;--lo:#b9c3cf;--lo-bg:#232a31;--ok:#8fd3a9;--ok-bg:#15301f;--shadow:0 1px 2px rgba(0,0,0,.4),0 12px 30px -14px rgba(0,0,0,.6);--night:#1f1d1c;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#121212;--wash:#1b1a19;--wash2:#242220;--ink:#f4f1ef;--text:#e4dfdc;--muted:#a69e9a;--hair:#2e2b29;--coral:#ef5a41;--coral-wash:#2b1814;--hi:#f5a196;--hi-bg:#3a1915;--md:#f1c06e;--md-bg:#33260f;--lo:#b9c3cf;--lo-bg:#232a31;--ok:#8fd3a9;--ok-bg:#15301f;--shadow:0 1px 2px rgba(0,0,0,.4),0 12px 30px -14px rgba(0,0,0,.6);--night:#1f1d1c;color-scheme:dark}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{background:var(--bg);color:var(--text);font:400 16px/1.6 var(--f-body);margin:0;padding-inline:20px;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1120px;margin:0 auto;padding-block:40px 120px}
+h1,h2,h3,h4{font-family:var(--f-head);color:var(--ink);margin:0;text-wrap:balance}
+h1{font-weight:900;font-size:clamp(38px,5.6vw,60px);line-height:1.04;letter-spacing:-.015em}
+h2{font-weight:900;font-size:clamp(28px,3.6vw,38px);line-height:1.12;letter-spacing:-.01em}
+h3{font-weight:700;font-size:21px;line-height:1.3}
+h4{font-weight:700;font-size:17px;line-height:1.35}
+p{margin:0;max-width:70ch}
+.muted{color:var(--muted)}
+.eyebrow{font:600 13px/1 var(--f-body);letter-spacing:.09em;text-transform:uppercase;color:var(--coral)}
+.small{font-size:14.5px}
+.num{font-variant-numeric:tabular-nums}
+a{color:var(--coral)}
+img{max-width:100%;display:block}
+.stack{display:flex;flex-direction:column;gap:16px;min-width:0}
+.row{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.sep{color:var(--hair);margin-inline:2px}
+
+/* surfaces: no outer strokes, tint or soft shadow only */
+.card{background:var(--bg);border-radius:var(--r);box-shadow:var(--shadow);padding:22px;display:flex;flex-direction:column;gap:12px;min-width:0}
+.panel{background:var(--wash);border-radius:var(--r);padding:24px;display:flex;flex-direction:column;gap:14px;min-width:0}
+.shot{border-radius:var(--r-sm);overflow:hidden;box-shadow:var(--shadow);background:var(--wash2)}
+.shot img{width:100%}
+
+/* tags */
+.tag{display:inline-flex;align-items:center;gap:6px;font:600 13px/1 var(--f-body);padding:6px 10px;border-radius:99px;white-space:nowrap;align-self:flex-start}
+.t-hi{color:var(--hi);background:var(--hi-bg)}.t-md{color:var(--md);background:var(--md-bg)}.t-lo{color:var(--lo);background:var(--lo-bg)}.t-ok{color:var(--ok);background:var(--ok-bg)}
+
+/* header */
+.top{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:40px;align-items:end;padding-bottom:36px}
+.top .logo{width:150px;margin-bottom:26px}
+.meta{display:flex;flex-wrap:wrap;gap:4px 10px;color:var(--muted);font-size:14.5px;margin-top:16px}
+.lede{font-size:18px;line-height:1.6;margin-top:18px}
+.verdict{background:var(--night);color:#fff;border-radius:var(--r);padding:26px;display:flex;flex-direction:column;gap:18px;background-image:linear-gradient(#ffffff0b 1px,transparent 1px),linear-gradient(90deg,#ffffff0b 1px,transparent 1px);background-size:44px 44px}
+.verdict .eyebrow{color:#ff8a73}
+.verdict p{color:#e7e2df;font-size:15.5px}
+.kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.kpis div{display:flex;flex-direction:column;gap:4px}
+.kpis b{font:900 34px/1 var(--f-head);color:#fff}
+.kpis span{font-size:13.5px;color:#cfc8c4;line-height:1.35}
+@media (max-width:860px){.top{grid-template-columns:1fr}}
+
+nav.tabs{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);margin-inline:-20px;padding:10px 20px;overflow-x:auto;white-space:nowrap;box-shadow:0 1px 0 var(--hair)}
+nav.tabs div{max-width:1120px;margin:0 auto;display:flex;gap:6px}
+nav.tabs a{color:var(--muted);text-decoration:none;font:500 14.5px var(--f-body);padding:8px 12px;border-radius:99px}
+nav.tabs a:hover{color:var(--ink);background:var(--wash)}
+nav.tabs a.on{color:var(--ink);background:var(--wash2)}
+a:focus-visible,button:focus-visible{outline:2px solid var(--coral);outline-offset:2px}
+
+section{padding-top:88px;display:flex;flex-direction:column;gap:28px;scroll-margin-top:60px}
+.sh{display:flex;flex-direction:column;gap:12px;max-width:780px}
+.sh p{font-size:17px}
+
+/* scorecard */
+.score{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:14px}
+.sc{background:var(--wash);border-radius:var(--r);padding:18px 20px;display:grid;grid-template-columns:1fr auto;gap:10px 16px;align-items:center}
+.sc h4{font-size:16.5px}
+.sc .scv{font:900 30px/1 var(--f-head);color:var(--ink)}
+.sc .scv small{font:500 14px var(--f-body);color:var(--muted)}
+.meter{grid-column:1/-1;height:8px;border-radius:99px;background:var(--wash2);overflow:hidden}
+.meter i{display:block;height:100%;border-radius:99px}
+.sc p{grid-column:1/-1;font-size:14.5px;color:var(--muted);line-height:1.5}
+
+/* good vs bad gallery */
+.gb{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+@media (max-width:860px){.gb{grid-template-columns:1fr}}
+.gb-col{display:flex;flex-direction:column;gap:16px}
+.gb-col>h3{display:flex;gap:10px;align-items:center}
+.tile{display:grid;grid-template-columns:150px 1fr;gap:16px;align-items:center;background:var(--wash);border-radius:var(--r);padding:12px}
+.tile .shot{aspect-ratio:16/10}
+.tile .shot img{width:100%;height:100%;object-fit:cover;object-position:top}
+.tile b{font:700 16px var(--f-head);color:var(--ink);display:block;margin-bottom:2px}
+.tile span{font-size:14.5px;color:var(--muted);line-height:1.45;display:block}
+@media (max-width:480px){.tile{grid-template-columns:1fr}}
+
+/* annotated screenshots */
+.annot-wrap{display:grid;grid-template-columns:minmax(0,520px) minmax(0,1fr);gap:32px;align-items:start}
+@media (max-width:920px){.annot-wrap{grid-template-columns:1fr}}
+.annot{position:relative;border-radius:var(--r-sm);overflow:hidden;box-shadow:var(--shadow)}
+.annot img{width:100%}
+.pin{position:absolute;transform:translate(-50%,-50%);width:30px;height:30px;border-radius:50%;display:grid;place-items:center;font:700 14px/1 var(--f-body);color:#fff;box-shadow:0 0 0 3px #fff,0 4px 10px rgba(0,0,0,.35)}
+.p-hi{background:#c0321f}.p-md{background:#b77400}.p-ok{background:#24804f}.p-lo{background:#4b5b70}
+.band{position:absolute;left:0;right:0;border-top:2px dashed rgba(255,255,255,.0)}
+.legend{display:flex;flex-direction:column}
+.lg{display:grid;grid-template-columns:30px 1fr;gap:14px;padding:14px 0;box-shadow:0 1px 0 var(--hair)}
+.lg .pin{position:static;transform:none;box-shadow:none}
+.lg h4{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.lg p{font-size:14.5px;color:var(--muted);margin-top:4px}
+.lg .y{font:500 13px var(--f-body);color:var(--muted)}
+.legend-sticky{position:sticky;top:76px}
+.phone{width:min(300px,100%);border-radius:28px;padding:10px;background:#0d0d0d;box-shadow:var(--shadow);justify-self:center}
+.phone .screen{max-height:640px;overflow-y:auto;border-radius:20px;overscroll-behavior:contain}
+.phone .annot{border-radius:0;box-shadow:none}
+.mob-grid{display:grid;grid-template-columns:320px 1fr;gap:32px;align-items:start}
+@media (max-width:820px){.mob-grid{grid-template-columns:1fr}}
+.mcrops{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:14px}
+.mcrops figure{margin:0;display:flex;flex-direction:column;gap:8px}
+.mcrops .shot{border-radius:14px;max-height:340px}
+.mcrops .shot{height:300px;background:var(--wash2)}
+.mcrops .shot img{object-fit:contain;object-position:top;height:100%}
+.mcrops figcaption{font-size:14px;color:var(--muted);line-height:1.45}
+.mcrops figcaption b{color:var(--ink);font-weight:600}
+
+/* sitemap tree */
+.tree{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px}
+.branch{background:var(--wash);border-radius:var(--r);padding:18px;display:flex;flex-direction:column;gap:8px}
+.branch>h4{font-size:16px;padding-bottom:8px;box-shadow:0 1px 0 var(--hair)}
+.leaf{display:flex;flex-direction:column;gap:6px;font-size:15px;padding:8px 0;box-shadow:0 1px 0 var(--hair)}
+.leaf:last-child{box-shadow:none}
+.leaf .row{justify-content:flex-start!important}
+.leaf span:first-child{min-width:0}
+.flag{font:600 12.5px/1 var(--f-body);padding:4px 8px;border-radius:99px;white-space:nowrap}
+.root{display:flex;gap:12px;align-items:center;flex-wrap:wrap;background:var(--night);color:#fff;border-radius:var(--r);padding:16px 20px}
+.root b{font:900 18px var(--f-head)}
+.root span{color:#cfc8c4;font-size:14.5px}
+
+/* brand kit */
+.logo-plates{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
+.plate{border-radius:var(--r);min-height:200px;display:grid;place-items:center;padding:28px;position:relative}
+.plate img{width:min(230px,70%)}
+.plate span{position:absolute;left:18px;bottom:14px;font-size:13.5px}
+.plate.dk{background:#121212;color:#a8a19d;background-image:linear-gradient(#ffffff0a 1px,transparent 1px),linear-gradient(90deg,#ffffff0a 1px,transparent 1px);background-size:48px 48px}
+.plate.lt{background:#fafafa;color:#6b6461;box-shadow:inset 0 0 0 1px #eee}
+.plate.mark{background:var(--wash)}
+.plate.mark img{width:90px}
+.pal{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px}
+.sw{border-radius:14px;overflow:hidden;background:var(--bg);box-shadow:var(--shadow)}
+.sw i{display:block;height:84px}
+.sw div{padding:10px 12px 12px;display:flex;flex-direction:column;gap:1px}
+.sw b{font:700 14.5px var(--f-head);color:var(--ink)}
+.sw code{font:500 13.5px var(--f-body);color:var(--text)}
+.sw small{font-size:13px;color:var(--muted);line-height:1.4}
+.drift{display:flex;flex-wrap:wrap;gap:8px}
+.drift i{width:46px;height:46px;border-radius:12px;display:block}
+.fonts{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+@media (max-width:860px){.fonts{grid-template-columns:1fr 1fr}}
+@media (max-width:480px){.fonts{grid-template-columns:1fr}}
+.fnt{background:var(--wash);border-radius:var(--r);padding:16px 18px;display:flex;flex-direction:column;gap:6px}
+.fnt .aa{font-size:34px;line-height:1.05;color:var(--ink)}
+.fnt b{font:600 14.5px var(--f-body);color:var(--ink)}
+.fnt small{font-size:13.5px;color:var(--muted);line-height:1.4}
+.matrix{width:100%;border-collapse:collapse;min-width:720px;font-size:14.5px}
+.matrix th,.matrix td{padding:12px 12px;text-align:left;vertical-align:top;box-shadow:0 1px 0 var(--hair)}
+.matrix th{font:600 13px var(--f-body);color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+.matrix td:first-child{font-weight:600;color:var(--ink)}
+.scroll{overflow-x:auto;border-radius:var(--r);background:var(--bg);box-shadow:var(--shadow);padding:6px 10px}
+.cmp{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+@media (max-width:760px){.cmp{grid-template-columns:1fr}}
+.cmp figure{margin:0;display:flex;flex-direction:column;gap:10px}
+.cmp .shot{aspect-ratio:16/9}
+.cmp .shot img{height:100%;object-fit:cover;object-position:top}
+.cmp figcaption{font-size:14.5px;color:var(--muted)}
+.cmp figcaption b{color:var(--ink)}
+
+/* messaging */
+.pmap{position:relative;background:var(--wash);border-radius:var(--r);aspect-ratio:16/10;min-height:340px;overflow:hidden}
+.pmap .ax{position:absolute;background:var(--hair)}
+.pmap .ax.x{left:6%;right:6%;top:50%;height:2px}
+.pmap .ax.y{top:8%;bottom:8%;left:50%;width:2px}
+.pmap .al{position:absolute;font:600 13px var(--f-body);color:var(--muted);letter-spacing:.04em;text-transform:uppercase}
+.pmap .dot{position:absolute;transform:translate(-50%,-50%);display:flex;flex-direction:column;align-items:center;gap:4px;font:600 13.5px var(--f-body);color:var(--text);white-space:nowrap}
+.pmap .dot i{width:14px;height:14px;border-radius:50%;background:#8b8480}
+.pmap .dot.z i{background:var(--coral);width:20px;height:20px;box-shadow:0 0 0 5px var(--coral-wash)}
+.pmap .dot.z{color:var(--coral);font-weight:700}
+.pmap svg{position:absolute;inset:0;width:100%;height:100%}
+.stories{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+.story{background:var(--wash);border-radius:var(--r);padding:18px;display:flex;flex-direction:column;gap:10px}
+.story q{font:700 18px/1.35 var(--f-head);color:var(--ink);quotes:none}
+.story small{font-size:13.5px;color:var(--muted)}
+.claims{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media (max-width:760px){.claims{grid-template-columns:1fr}}
+.claim{background:var(--wash);border-radius:var(--r);padding:18px;display:flex;flex-direction:column;gap:12px}
+.vals{display:flex;flex-wrap:wrap;gap:8px}
+.val{background:var(--bg);border-radius:12px;padding:10px 12px;display:flex;flex-direction:column;gap:2px;box-shadow:var(--shadow)}
+.val b{font:900 22px/1 var(--f-head);color:var(--ink)}
+.val span{font-size:13px;color:var(--muted)}
+
+/* evidence */
+.ev{display:grid;grid-template-columns:1fr 1fr;gap:28px 24px}
+@media (max-width:760px){.ev{grid-template-columns:1fr}}
+.ev .shot{aspect-ratio:2.7/1}
+.ev .shot img{height:100%;object-fit:cover;object-position:center}
+.ev figure{margin:0;display:flex;flex-direction:column;gap:10px}
+.ev figcaption{display:flex;flex-direction:column;gap:6px;font-size:14.5px;color:var(--muted)}
+.ev figcaption b{color:var(--ink);font:700 16px var(--f-head)}
+
+/* tracker */
+.filters{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.filters span{font-size:14px;color:var(--muted);margin-right:4px}
+.chip{font:500 14px var(--f-body);padding:8px 14px;border-radius:99px;border:0;background:var(--wash);color:var(--text);cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--ink);color:var(--bg)}
+.trk{width:100%;border-collapse:collapse;font-size:14.5px;min-width:900px}
+.trk th{font:600 12.5px var(--f-body);letter-spacing:.06em;text-transform:uppercase;color:var(--muted);text-align:left;padding:12px 10px;box-shadow:0 1px 0 var(--hair);position:sticky;top:0;background:var(--bg)}
+.trk td{padding:14px 10px;vertical-align:top;box-shadow:0 1px 0 var(--hair)}
+.trk td:nth-child(1){font:600 13.5px var(--f-body);color:var(--muted);width:56px}
+.trk td:nth-child(3) b{color:var(--ink);font-weight:600;display:block}
+.trk td:nth-child(3) span{color:var(--muted)}
+.trk .area{font-size:13.5px;color:var(--muted);white-space:nowrap}
+.count{font-size:14.5px;color:var(--muted)}
+
+/* improvements */
+.ba{display:grid;grid-template-columns:1fr 1fr;gap:18px;align-items:stretch}
+@media (max-width:800px){.ba{grid-template-columns:1fr}}
+.ba>div{display:flex;flex-direction:column;gap:10px;min-width:0}
+.ba .lab{display:flex;gap:8px;align-items:center;font:600 14px var(--f-body);color:var(--muted)}
+.mock{border-radius:var(--r);overflow:hidden;height:340px;position:relative}
+.ba .shot{height:340px;border-radius:var(--r)}
+.ba .shot img{height:100%;object-fit:cover;object-position:top}
+.ba .shot.fit{background:#fafafa;display:grid;place-items:center}
+.ba .shot.fit.dk{background:#121212}
+.ba .shot.fit img{height:auto;object-fit:contain}
+@media (max-width:800px){.mock,.ba .shot{height:auto;min-height:260px}.ba .shot img{height:auto}}
+.mock.ink{background:#121212;color:#fff;background-image:linear-gradient(#ffffff0a 1px,transparent 1px),linear-gradient(90deg,#ffffff0a 1px,transparent 1px);background-size:44px 44px;padding:30px;display:flex;flex-direction:column;gap:14px;justify-content:center}
+.mock.paper{background:#fafafa;color:#2e2e2e;padding:26px;display:flex;flex-direction:column;gap:14px;justify-content:center;box-shadow:inset 0 0 0 1px #eee}
+.mock h3.z{font:700 30px/1.15 "Lato",sans-serif;color:#fff}
+.mock p.z{font:400 15px/1.55 "Inter",sans-serif;color:#d9d3cf;max-width:44ch}
+.zb{font:500 15px/1 "Inter",sans-serif;padding:13px 22px;border-radius:6px;border:0;background:#D54029;color:#fff}
+.zb.g{background:transparent;box-shadow:inset 0 0 0 1px #fff}
+.hubm{display:grid;grid-template-columns:1fr auto 1fr;gap:14px 18px;align-items:center;padding:30px}
+.hubm .c{width:120px;height:120px;border-radius:50%;background:#1e1e1e;box-shadow:0 0 0 2px #D54029,0 0 0 10px #1a1a1a;display:grid;place-items:center;text-align:center;font:700 16px/1.2 "Lato",sans-serif;color:#fff;grid-row:1/4;grid-column:2}
+.hubm .p{background:#1e1e1e;border-radius:99px;padding:10px 14px;font:500 13.5px "Inter",sans-serif;color:#fff;display:flex;gap:8px;align-items:center}
+.hubm .p::before{content:"";width:8px;height:8px;border-radius:50%;background:#D54029;flex:none}
+.hubm .l{justify-self:end}
+@media (max-width:640px){.hubm{grid-template-columns:1fr 1fr;padding:20px}.hubm .c{grid-column:1/-1;grid-row:auto;justify-self:center;order:-1}.hubm .l{justify-self:stretch}}
+.tcard{background:#fff;border-radius:12px;padding:20px;box-shadow:0 1px 3px rgba(0,0,0,.08);display:flex;flex-direction:column;gap:12px;font:400 14px/1.55 "Inter",sans-serif;color:#2e2e2e;max-width:340px}
+.tcard .who{display:flex;gap:12px;align-items:center}
+.tcard .av{width:44px;height:44px;border-radius:50%;background:#e9e9e9;display:grid;place-items:center;font:700 15px "Inter",sans-serif;color:#9a9a9a}
+.tcard .av.n{background:#fbede9;color:#D54029}
+.tcard b{font:600 15px "Inter",sans-serif;color:#121212;display:block}
+.tcard .co{color:#777;font-size:13.5px}
+.tcard .metric{font:900 26px/1 "Lato",sans-serif;color:#D54029}
+.ex{font:600 12px var(--f-body);color:var(--md);background:var(--md-bg);padding:4px 8px;border-radius:99px;align-self:flex-start}
+.statsm{display:flex;flex-wrap:wrap;gap:22px 34px}
+.statsm div{display:flex;flex-direction:column;gap:4px}
+.statsm b{font:600 30px/1 "Inter",sans-serif;color:#000}
+.statsm span{font:400 13.5px "Inter",sans-serif;color:#555}
+.statsm sup{font-size:11px;color:#D54029}
+
+/* playbook */
+.ads{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+@media (max-width:760px){.ads{grid-template-columns:1fr}}
+.ad{aspect-ratio:1/1;border-radius:var(--r);overflow:hidden;position:relative;padding:26px;display:flex;flex-direction:column;justify-content:space-between}
+.ad.do{background:#121212;background-image:linear-gradient(#ffffff0a 1px,transparent 1px),linear-gradient(90deg,#ffffff0a 1px,transparent 1px);background-size:40px 40px}
+.ad.dont{background:linear-gradient(135deg,#ff7a18,#af002d 40%,#319197 75%,#7b2ff7)}
+.ad .hd{font:700 clamp(22px,3.2vw,30px)/1.15 "Lato",sans-serif;color:#fff;max-width:16ch}
+.ad.dont .hd{font-family:"Poppins","Trebuchet MS",sans-serif;font-weight:800;text-transform:capitalize}
+.ad .sub{font:400 14.5px/1.5 "Inter",sans-serif;color:#d9d3cf;max-width:34ch}
+.ad.dont .sub{color:#fff}
+.ad img.lg{width:96px}
+.ad .ft{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
+.ad .ui{position:absolute;right:-40px;bottom:86px;width:56%;border-radius:10px;box-shadow:0 20px 40px rgba(0,0,0,.5)}
+.ad .bad{position:absolute;top:12px;right:12px}
+.ad .flags{display:flex;flex-direction:column;gap:6px}
+.ad .flags span{font:600 12.5px var(--f-body);background:#fff;color:#a1271a;padding:5px 9px;border-radius:99px;align-self:flex-start}
+.ledger{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+@media (max-width:860px){.ledger{grid-template-columns:1fr}}
+.ledger>div{border-radius:var(--r);padding:20px;display:flex;flex-direction:column;gap:10px}
+.ledger ul{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;font-size:15px}
+.l-ok li{box-shadow:0 1px 0 rgba(29,106,67,.15)!important}.l-md li{box-shadow:0 1px 0 rgba(138,86,0,.15)!important}.l-hi li{box-shadow:0 1px 0 rgba(161,39,26,.15)!important}
+.ledger li:last-child{box-shadow:none!important}
+.l-ok{background:var(--ok-bg)}.l-md{background:var(--md-bg)}.l-hi{background:var(--hi-bg)}
+.l-ok h4{color:var(--ok)}.l-md h4{color:var(--md)}.l-hi h4{color:var(--hi)}
+.plan{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+@media (max-width:900px){.plan{grid-template-columns:1fr 1fr}}
+@media (max-width:520px){.plan{grid-template-columns:1fr}}
+.wk{background:var(--wash);border-radius:var(--r);padding:18px;display:flex;flex-direction:column;gap:10px}
+.wk .w{font:900 15px var(--f-head);color:var(--coral)}
+.wk ul{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;font-size:14.5px}
+.rules{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+@media (max-width:860px){.rules{grid-template-columns:1fr 1fr}}
+@media (max-width:480px){.rules{grid-template-columns:1fr}}
+.rule{background:var(--wash);border-radius:var(--r);padding:18px;display:flex;flex-direction:column;gap:6px}
+.rule b{font:700 16px var(--f-head);color:var(--ink)}
+.rule span{font-size:14.5px;color:var(--muted)}
+
+/* seo */
+.gauges{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px}
+.gauge{background:var(--wash);border-radius:var(--r);padding:18px;display:flex;flex-direction:column;align-items:center;gap:8px;text-align:center}
+.gauge svg{width:96px;height:96px}
+.gauge b{font:700 15px var(--f-head);color:var(--ink)}
+.gauge small{font-size:13px;color:var(--muted)}
+.serp{background:var(--bg);border-radius:var(--r);box-shadow:var(--shadow);padding:20px;display:flex;flex-direction:column;gap:4px;font-family:Arial,sans-serif}
+.serp .u{font-size:13.5px;color:#4d5156;display:flex;gap:8px;align-items:center}
+.serp .u i{width:26px;height:26px;border-radius:50%;background:#f1f3f4;display:grid;place-items:center;overflow:hidden}
+.serp .t{font-size:20px;color:#1a0dab;line-height:1.3}
+.serp .d{font-size:14px;color:#4d5156;line-height:1.55}
+:root[data-theme="dark"] .serp .t{color:#8ab4f8}:root[data-theme="dark"] .serp .u,:root[data-theme="dark"] .serp .d{color:#bdc1c6}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .serp .t{color:#8ab4f8}:root:not([data-theme="light"]) .serp .u,:root:not([data-theme="light"]) .serp .d{color:#bdc1c6}}
+.og{border-radius:14px;overflow:hidden;background:var(--bg);box-shadow:var(--shadow);max-width:500px}
+.og .im{aspect-ratio:1.91/1;display:grid;place-items:center;background:var(--wash2);color:var(--muted);font-size:14px}
+.og .im.good{background:#121212;background-image:linear-gradient(#ffffff0a 1px,transparent 1px),linear-gradient(90deg,#ffffff0a 1px,transparent 1px);background-size:36px 36px;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:12px;padding:28px}
+.og .im.good b{font:700 24px/1.15 "Lato",sans-serif;color:#fff;max-width:18ch}
+.og .tx{padding:12px 14px;display:flex;flex-direction:column;gap:2px;background:var(--wash)}
+.og .tx small{font-size:12.5px;color:var(--muted);text-transform:uppercase}
+.og .tx b{font:600 15px var(--f-body);color:var(--ink)}
+.og .tx span{font-size:13.5px;color:var(--muted)}
+.tbl{width:100%;border-collapse:collapse;font-size:14.5px;min-width:760px}
+.tbl th{font:600 12.5px var(--f-body);letter-spacing:.06em;text-transform:uppercase;color:var(--muted);text-align:left;padding:11px 10px;box-shadow:0 1px 0 var(--hair)}
+.tbl td{padding:11px 10px;box-shadow:0 1px 0 var(--hair);vertical-align:top}
+.tbl td:first-child{font-weight:600;color:var(--ink)}
+.bars{display:flex;flex-direction:column;gap:10px}
+.bar{display:grid;grid-template-columns:200px 1fr 60px;gap:12px;align-items:center;font-size:14.5px}
+.bar .tr{height:12px;background:var(--wash2);border-radius:99px;overflow:hidden}
+.bar .tr i{display:block;height:100%;border-radius:99px;background:var(--coral)}
+.bar b{font-weight:600;color:var(--ink);text-align:right}
+@media (max-width:560px){.bar{grid-template-columns:1fr 50px}.bar .tr{grid-column:1/-1;grid-row:2}}
+
+/* blog */
+.mini{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px}
+.mini div{background:var(--wash);border-radius:var(--r);padding:16px 18px;display:flex;flex-direction:column;gap:6px}
+.mini b{font:900 34px/1 var(--f-head);color:var(--ink)}
+.mini span{font-size:14px;color:var(--muted);line-height:1.35}
+.stackbar{display:flex;border-radius:12px;overflow:hidden;min-height:52px}
+.stackbar i{font:600 13px/1.25 var(--f-body);font-style:normal;color:#fff;display:flex;align-items:center;justify-content:center;text-align:center;padding:8px 6px;min-width:0;overflow-wrap:anywhere}
+@media (max-width:640px){.stackbar{flex-direction:column}.stackbar i{flex:none!important;justify-content:flex-start;padding:10px 14px}}
+.timeline{position:relative;height:118px;margin:6px 8px 0}
+.tl-line{position:absolute;left:0;right:0;top:18px;height:2px;background:var(--hair)}
+.tl{position:absolute;top:10px;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:6px;text-align:center;width:120px}
+.tl i{width:18px;height:18px;border-radius:50%;background:var(--muted);box-shadow:0 0 0 4px var(--wash)}
+.tl i.bad{background:var(--coral)}
+.tl b{font:700 15px var(--f-head);color:var(--ink)}
+.tl span{font-size:13px;color:var(--muted);line-height:1.3}
+@media (max-width:640px){.timeline{height:auto;display:flex;flex-direction:column;gap:12px}.tl-line{display:none}.tl{position:static;transform:none;flex-direction:row;width:auto;text-align:left;gap:10px}.tl b{min-width:72px}}
+.ul{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:0;font-size:15px}
+.ul li,.ledger li,.wk li{padding:8px 0;box-shadow:0 1px 0 var(--hair)}
+.ul li:last-child,.ledger li:last-child,.wk li:last-child{box-shadow:none}
+.ul b{color:var(--ink);font-weight:600}
+
+
+/* strategy */
+.material-symbols-rounded{font-family:"Material Symbols Rounded";font-weight:normal;font-style:normal;font-size:24px;line-height:1;letter-spacing:normal;text-transform:none;display:inline-block;white-space:nowrap;-webkit-font-feature-settings:"liga";font-feature-settings:"liga";-webkit-font-smoothing:antialiased;font-variation-settings:"FILL" 1,"wght" 500}
+.opts{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media (max-width:760px){.opts{grid-template-columns:1fr}}
+.opt{background:var(--wash);border-radius:var(--r);padding:22px;display:flex;flex-direction:column;gap:12px}
+.opt.rec{background:var(--bg);box-shadow:var(--shadow),inset 0 0 0 2px var(--coral)}
+.opt h4{font-size:20px}
+.ready{display:grid;grid-template-columns:120px 1fr;gap:8px 12px;align-items:center;font-size:14px;color:var(--muted)}
+.ready i{height:8px;border-radius:99px;background:linear-gradient(90deg,var(--ink) var(--v),var(--wash2) var(--v))}
+.statement{background:var(--night);color:#fff;border-radius:var(--r);padding:28px;display:flex;flex-direction:column;gap:12px;background-image:linear-gradient(#ffffff0b 1px,transparent 1px),linear-gradient(90deg,#ffffff0b 1px,transparent 1px);background-size:44px 44px}
+.statement .eyebrow{color:#ff8a73}
+.statement p{font:400 20px/1.55 var(--f-body);color:#e9e4e1;max-width:62ch}
+.statement b{color:#fff;font-weight:600}
+.taglines{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+@media (max-width:760px){.taglines{grid-template-columns:1fr}}
+.taglines div{background:var(--wash);border-radius:var(--r);padding:18px 20px;display:flex;flex-direction:column;gap:6px}
+.taglines b{font:900 24px/1.15 var(--f-head);color:var(--ink)}
+.segs{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+@media (max-width:900px){.segs{grid-template-columns:1fr}}
+.seg{background:var(--wash);border-radius:var(--r);padding:20px;display:flex;flex-direction:column;gap:10px}
+.seg dl{margin:0;display:grid;grid-template-columns:92px 1fr;gap:8px 10px;font-size:14.5px}
+.seg dt{color:var(--muted);font-weight:500}
+.seg dd{margin:0;color:var(--text)}
+.house{display:flex;flex-direction:column;gap:10px}
+.roof{background:#D54029;color:#fff;border-radius:var(--r) var(--r) 6px 6px;padding:22px;text-align:center;font:900 26px/1.2 var(--f-head);display:flex;flex-direction:column;gap:6px}
+.roof span{font:500 15.5px var(--f-body);color:#fff}
+.pillars{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+@media (max-width:900px){.pillars{grid-template-columns:1fr 1fr}}
+@media (max-width:480px){.pillars{grid-template-columns:1fr}}
+.pil{background:var(--wash);border-radius:6px;padding:18px;display:flex;flex-direction:column;gap:8px}
+.pil .material-symbols-rounded{width:40px;height:40px;border-radius:10px;background:#121212;color:#fff;display:grid;place-items:center;font-size:22px}
+.pil b{font:700 18px var(--f-head);color:var(--ink)}
+.pil p{font-size:14.5px}
+.pil small{font-size:13px;color:var(--coral);font-weight:600}
+.base{background:var(--night);color:#fff;border-radius:6px 6px var(--r) var(--r);padding:14px;display:flex;flex-wrap:wrap;justify-content:center;gap:6px 12px;font:600 14.5px var(--f-body)}
+.base .sep{color:#6b6461}
+.voice{display:flex;flex-direction:column;gap:10px}
+.vrow{display:grid;grid-template-columns:auto 1fr auto 1fr;gap:12px;align-items:center;background:var(--wash);border-radius:var(--r);padding:14px 18px}
+.vrow p{font-size:15px}
+.vrow p:nth-of-type(1){color:var(--muted);text-decoration:line-through;text-decoration-color:rgba(192,50,31,.5)}
+.vrow p:nth-of-type(2){font:700 17px var(--f-head);color:var(--ink)}
+@media (max-width:760px){.vrow{grid-template-columns:auto 1fr}}
+.words{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media (max-width:760px){.words{grid-template-columns:1fr}}
+.words div{background:var(--wash);border-radius:var(--r);padding:16px 18px;display:flex;flex-direction:column;gap:8px}
+.words p{font-size:15px}
+.sys{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+@media (max-width:980px){.sys{grid-template-columns:1fr 1fr}}
+@media (max-width:620px){.sys{grid-template-columns:1fr}}
+.sysc{background:var(--wash);border-radius:var(--r);padding:20px;display:flex;flex-direction:column;gap:12px;min-width:0}
+.lsuite{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.lv{border-radius:12px;min-height:96px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;padding:12px}
+.lv img{width:80%}
+.lv .mk{width:44px;height:44px}
+.lv small{font-size:12.5px}
+.lv.dk{background:#121212;color:#a8a19d}
+.lv.lt{background:#fafafa;color:#6b6461}
+.lv.todo{background:var(--bg);color:var(--muted);box-shadow:inset 0 0 0 1.5px var(--hair)}
+.lv.todo span{font:600 13.5px var(--f-body);color:var(--ink)}
+.ratio{display:flex;height:64px;border-radius:12px;overflow:hidden;box-shadow:inset 0 0 0 1px var(--hair)}
+.ratio i{display:flex;align-items:flex-end;padding:8px;font:600 12.5px var(--f-body);font-style:normal;color:#fff;min-width:0;white-space:nowrap}
+.ramp2{display:flex;height:28px;border-radius:8px;overflow:hidden}
+.ramp2 i{flex:1}
+.tscale{display:flex;flex-direction:column}
+.tscale div{display:flex;flex-direction:column;gap:4px;padding:10px 0;box-shadow:0 1px 0 var(--hair);color:var(--ink);min-width:0;overflow-wrap:anywhere}
+.tscale div:last-child{box-shadow:none}
+.tscale small{font-size:12.5px;color:var(--muted)}
+.icons{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.icons span{aspect-ratio:1;border-radius:12px;background:#121212;color:#fff;display:grid;place-items:center;font-size:26px}
+.device{border-radius:12px;background:#121212;padding:16px;background-image:linear-gradient(#ffffff0a 1px,transparent 1px),linear-gradient(90deg,#ffffff0a 1px,transparent 1px);background-size:28px 28px}
+.gapmap{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+@media (max-width:860px){.gapmap{grid-template-columns:1fr 1fr}}
+@media (max-width:520px){.gapmap{grid-template-columns:1fr}}
+.gm{background:var(--wash);border-radius:12px;padding:12px 14px;display:grid;grid-template-columns:1fr auto;gap:4px 10px;align-items:start}
+.gm b{font-weight:600;color:var(--ink);font-size:15px}
+.gm small{grid-column:1/-1;font-size:13.5px;color:var(--muted);line-height:1.4}
+.journey{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+@media (max-width:900px){.journey{grid-template-columns:1fr 1fr}}
+@media (max-width:520px){.journey{grid-template-columns:1fr}}
+.stage{background:var(--wash);border-radius:var(--r);padding:18px;display:flex;flex-direction:column;gap:10px;position:relative}
+.stage .n{font:900 13px var(--f-head);color:var(--muted);letter-spacing:.08em;text-transform:uppercase}
+.stage h4{font-size:18px}
+.stage .sbar{height:6px;border-radius:99px}
+.stage p{font-size:14.5px}
+.stage .fix{font-size:14px;color:var(--ink);font-weight:500}
+.matrix2{position:relative;background:var(--wash);border-radius:var(--r);height:440px;margin-bottom:34px;background-image:linear-gradient(var(--hair),var(--hair)),linear-gradient(var(--hair),var(--hair));background-size:100% 2px,2px 100%;background-position:0 50%,50% 0;background-repeat:no-repeat}
+.mx-l{position:absolute;font:500 13.5px var(--f-body);color:var(--muted)}
+.q{position:absolute;font:700 15px var(--f-head);color:var(--coral)}
+.q.lo{color:var(--muted)}
+.mxd{position:absolute;transform:translate(-6px,-50%);display:flex;align-items:center;gap:8px;font:500 13.5px var(--f-body);color:var(--text);max-width:200px}
+.mxd i{width:12px;height:12px;border-radius:50%;flex:none;background:var(--muted)}
+.mxd.now i{background:var(--coral);box-shadow:0 0 0 4px var(--coral-wash)}
+@media (max-width:700px){.matrix2{height:auto;background-image:none;padding:16px;display:flex;flex-direction:column;gap:10px}.matrix2 .mx-l,.matrix2 .q{display:none}.mxd{position:static;transform:none;max-width:none}#mxdots{display:flex;flex-direction:column;gap:10px}}
+.plan3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+@media (max-width:860px){.plan3{grid-template-columns:1fr}}
+.kpis2{display:flex;flex-wrap:wrap;gap:8px}
+.kpis2 span{background:var(--bg);border-radius:99px;padding:8px 14px;font-size:14.5px;box-shadow:var(--shadow)}
+
+
+/* social */
+.field{display:grid;grid-template-columns:repeat(7,1fr);gap:12px}
+@media (max-width:860px){.field{grid-template-columns:repeat(4,1fr)}}
+@media (max-width:480px){.field{grid-template-columns:repeat(3,1fr)}}
+.field div{display:flex;flex-direction:column;gap:10px;font-size:14px;color:var(--text)}
+.field i{display:block;height:96px;border-radius:14px}
+@media (max-width:860px){.field i{height:64px}}
+.field small{color:var(--muted);font-size:13px}
+.field .own b{color:var(--coral)}
+.igwrap{display:grid;grid-template-columns:minmax(0,440px) 1fr;gap:28px;align-items:start}
+@media (max-width:900px){.igwrap{grid-template-columns:1fr}}
+.ig{background:var(--bg);border-radius:24px;box-shadow:var(--shadow);overflow:hidden}
+.ighead{display:grid;grid-template-columns:76px 1fr;gap:16px;align-items:center;padding:20px}
+.igav{width:76px;height:76px;border-radius:50%;background:#121212;display:grid;place-items:center;box-shadow:0 0 0 3px var(--bg),0 0 0 5px #D54029}
+.igav svg{width:40px;height:40px}
+.ighead b{font:700 17px var(--f-body);color:var(--ink)}
+.ighead p{font-size:14px;line-height:1.45;margin-top:2px}
+.iglink{font:600 14px var(--f-body);color:#4b6ea8}
+.iggrid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px}
+.iggrid img{width:100%;aspect-ratio:3/4;object-fit:cover}
+.posts{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+@media (max-width:760px){.posts{grid-template-columns:1fr}}
+.pc{background:var(--wash);border-radius:var(--r);padding:16px;display:grid;grid-template-columns:200px 1fr;gap:18px;align-items:start}
+@media (max-width:480px){.pc{grid-template-columns:1fr}}
+.pc img{width:100%;border-radius:10px;box-shadow:var(--shadow)}
+.pc h4{font-size:18px}
+.pc .meta2{display:flex;flex-wrap:wrap;gap:6px}
+.pc p{font-size:14.5px;line-height:1.55}
+.pc .cap{background:var(--bg);border-radius:10px;padding:12px 14px;font-size:14.5px;color:var(--text)}
+.pc .hash{font-size:13.5px;color:#4b6ea8}
+.pc .goal{font-size:14px;color:var(--muted)}
+.cal{display:grid;grid-template-columns:110px repeat(4,1fr);gap:8px}
+.cal .h{font:600 13px var(--f-body);color:var(--muted);text-transform:uppercase;letter-spacing:.06em;padding:6px 4px}
+.cal .wkl{font:700 15px var(--f-head);color:var(--ink);padding:10px 4px;display:flex;align-items:center}
+.cal .slot{background:var(--wash);border-radius:12px;padding:8px;display:grid;grid-template-columns:44px 1fr;gap:10px;align-items:center;font-size:13.5px;min-width:0}
+.cal .slot img{width:44px;aspect-ratio:4/5;object-fit:cover;border-radius:6px}
+.cal .slot b{display:block;font-weight:600;color:var(--ink);font-size:13.5px;line-height:1.3}
+.cal .slot small{color:var(--muted);font-size:12.5px}
+@media (max-width:760px){.cal{grid-template-columns:1fr 1fr}.cal .h,.cal .wkl{display:none}}
+
+/* tokens */
+.tok{position:relative}
+.tok pre{margin:0;background:#141211;color:#ece6e3;border-radius:var(--r);padding:22px;overflow-x:auto;font:400 13.5px/1.7 ui-monospace,SFMono-Regular,Menlo,monospace}
+.tok button{position:absolute;top:12px;right:12px;font:500 13.5px var(--f-body);padding:8px 14px;border-radius:8px;border:0;background:#ffffff1c;color:#fff;cursor:pointer}
+footer.end{margin-top:80px;padding-top:24px;box-shadow:0 -1px 0 var(--hair);color:var(--muted);font-size:14px;display:flex;flex-direction:column;gap:6px}
+</style>
+
+<div class="wrap">
+<header class="top">
+  <div>
+    <img class="logo" src="logo.svg" alt="Zippyy logo">
+    <span class="eyebrow">Brand, website, blog and SEO audit</span>
+    <h1 style="margin-top:12px">Zippyy brand audit</h1>
+    <div class="meta"><span>zippyy.ai</span><span class="sep">|</span><span>Captured 5 Oct 2026</span><span class="sep">|</span><span>Homepage, 20 inner pages, every blog post, competitor Instagram feeds</span><span class="sep">|</span><span>Desktop 1440px and iPhone 390px</span></div>
+    <p class="lede">Zippyy sells AI logistics software to Indian D2C brands and logistics teams. It was GoDash until recently. The core identity is strong and usable: coral on charcoal, a distinctive Z mark, real product screens. The problem is everything around it. Leftover text from other companies, two different business stories, off-brand graphics and unbacked numbers. Below: the audit, a brand strategy, and 12 ready social posts.</p>
+  </div>
+  <div class="verdict">
+    <span class="eyebrow">The short version</span>
+    <div class="kpis">
+      <div><b class="num" id="kpiIssues">0</b><span>issues logged in the tracker</span></div>
+      <div><b class="num" id="kpiHigh">0</b><span>high priority, fix before any campaign</span></div>
+      <div><b class="num">5</b><span>pages carrying a competitor's text (Shipsy, Shipway)</span></div>
+    </div>
+    <p>Fix the trust problems first (week 1), then tidy SEO and brand drift. Do not spend on ads that land on the current homepage until the competitor and GoDash text is gone.</p>
+  </div>
+</header>
+
+<nav class="tabs" aria-label="Sections"><div>
+  <a href="#overview">Overview</a><a href="#structure">Website structure</a><a href="#mobile">Mobile</a><a href="#brand">Brand identity</a><a href="#messaging">Positioning</a><a href="#blog">Blog</a><a href="#seo">SEO</a><a href="#evidence">Evidence</a><a href="#tracker">Issue tracker</a><a href="#improve">Improvements</a><a href="#strategy">Strategy</a><a href="#social">Social</a><a href="#playbook">Marketing playbook</a><a href="#tokens">Tokens</a>
+</div></nav>
+
+<!-- OVERVIEW -->
+<section id="overview">
+  <div class="sh"><span class="eyebrow">Overview</span><h2>How healthy is the brand today</h2><p class="muted">Scored out of 10 against what a B2B SaaS buyer expects to see. Each score is explained underneath.</p></div>
+  <div class="score" id="scorecard"></div>
+  <div class="gb">
+    <div class="gb-col">
+      <h3><span class="tag t-ok">Working</span>Keep and build on</h3>
+      <div class="tile"><div class="shot"><img src="img/c_hero.jpg" alt=""></div><div><b>Clear hero with one action</b><span>Dark hero, isometric logistics art, one coral "Request demo" button. Instantly reads as logistics tech.</span></div></div>
+      <div class="tile"><div class="shot"><img src="img/c_sectors.jpg" alt=""></div><div><b>Sectors diagram is fully on brand</b><span>Ink, coral lines, the Z mark at the center. This is the visual standard for every graphic.</span></div></div>
+      <div class="tile"><div class="shot"><img src="img/c_3pl.jpg" alt=""></div><div><b>Real product screens</b><span>Actual dashboard UI with coral top bar. Concrete proof that the product exists.</span></div></div>
+      <div class="tile"><div class="shot"><img src="img/c_logos.jpg" alt=""></div><div><b>Recognizable client logos</b><span>The Good Glamm Group, Casekaro, Amura, Kayura, Tyremarket. Real D2C names buyers know.</span></div></div>
+      <div class="tile"><div class="shot"><img src="img/top_pricing.jpg" alt=""></div><div><b>Transparent pricing</b><span>Four plans in rupees, free tier, no card. Rare in this category and a strong conversion asset.</span></div></div>
+    </div>
+    <div class="gb-col">
+      <h3><span class="tag t-hi">Broken</span>Fix first</h3>
+      <div class="tile"><div class="shot"><img src="img/x_ev_shipsy_tms.jpg" alt=""></div><div><b>Competitor name in live copy</b><span>"Shipsy TMS" on the TMS page, plus the customers and partner pages.</span></div></div>
+      <div class="tile"><div class="shot"><img src="img/c_testi.jpg" alt=""></div><div><b>Testimonials praise GoDash</b><span>Grey placeholder avatars, first names only, old brand name in the quote.</span></div></div>
+      <div class="tile"><div class="shot"><img src="img/c_hub.jpg" alt=""></div><div><b>Off-brand graphics</b><span>Platform Hub uses six rainbow gradients and text baked into a flat image.</span></div></div>
+      <div class="tile"><div class="shot"><img src="img/c_stats.jpg" alt=""></div><div><b>Numbers nobody can back</b><span>250M+ shipments and $350M freight a month, for a bootstrapped company under ₹10 Cr revenue.</span></div></div>
+      <div class="tile"><div class="shot"><img src="img/top_blog.jpg" alt=""></div><div><b>Blog page titled "Brochures"</b><span>Five different stories, dates before the company existed, one post copied from a competitor.</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- STRUCTURE -->
+<section id="structure">
+  <div class="sh"><span class="eyebrow">Website structure</span><h2>The homepage, section by section</h2><p class="muted">Full desktop capture at 1440px. Numbers match the notes on the right. Green is working, amber needs work, red is a problem.</p></div>
+  <div class="annot-wrap">
+    <div class="annot" id="deskAnnot"><img src="img/home_desktop.jpg" alt="Full Zippyy homepage, desktop"></div>
+    <div class="legend legend-sticky" id="deskLegend"></div>
+  </div>
+  <div class="root"><b>zippyy.ai</b><span>29 pages in the main navigation and footer</span><span class="sep">|</span><span>Flags show what each page carries</span></div>
+  <div class="tree" id="tree"></div>
+</section>
+
+<!-- MOBILE -->
+<section id="mobile">
+  <div class="sh"><span class="eyebrow">Mobile</span><h2>On a phone the homepage runs 8,961px, about 11 screens</h2><p class="muted">iPhone 390px. Most Indian D2C founders will see this version first.</p></div>
+  <div class="mob-grid">
+    <div class="stack" style="gap:10px;align-items:center"><div class="phone"><div class="screen"><div class="annot" id="mobAnnot"><img src="img/home_mobile.jpg" alt="Full Zippyy homepage on mobile"></div></div></div><span class="small muted">Scroll inside the phone to see the full page</span></div>
+    <div class="stack">
+      <div class="legend" id="mobLegend"></div>
+      <div class="mcrops">
+        <figure><div class="shot"><img src="img/m_hero.jpg" alt=""></div><figcaption><b>Header.</b> Tiny logo, menu icon sits under it instead of on the right.</figcaption></figure>
+        <figure><div class="shot"><img src="img/m_logos.jpg" alt=""></div><figcaption><b>Logos.</b> Clipped at both screen edges.</figcaption></figure>
+        <figure><div class="shot"><img src="img/m_adv.jpg" alt=""></div><figcaption><b>Advantage.</b> Four clip-art images take 1,547px.</figcaption></figure>
+        <figure><div class="shot"><img src="img/m_cta.jpg" alt=""></div><figcaption><b>Demo CTA.</b> Headline breaks into four lines, "Of" alone.</figcaption></figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BRAND -->
+<section id="brand">
+  <div class="sh"><span class="eyebrow">Brand identity</span><h2>A good core, diluted by drift</h2><p class="muted">The core system is coral, charcoal, Lato and Inter. Around it, the site carries extra fonts, rainbow graphics and three different icon styles.</p></div>
+  <h3>Logo</h3>
+  <div class="logo-plates">
+    <div class="plate dk"><img src="logo.svg" alt="Zippyy logo on charcoal"><span>Header and footer, on #121212</span></div>
+    <div class="plate lt"><img src="logo.svg" alt="Zippyy logo on off-white"><span>On #FAFAFA, also reads well</span></div>
+  </div>
+  <div class="rules">
+    <div class="rule"><b>Built-in mark</b><span>The "z" is three rounded bars, the same mark used at the center of the Sectors diagram. Strong and ownable.</span></div>
+    <div class="rule"><b>Only one file</b><span>No mono, no reversed, no standalone mark file. logo.svg and logo-1.svg are identical copies. The favicon is a JPG crop.</span></div>
+    <div class="rule"><b>Colors in the logo</b><span>#F44E32 and #D54029 with gradient shading from #8F221E to #FBAFA3. Brighter than the UI coral.</span></div>
+  </div>
+
+  <h3 style="margin-top:12px">Color: the system vs what ships</h3>
+  <div class="pal">
+    <div class="sw"><i style="background:#D54029"></i><div><b>Coral</b><code>#D54029</code><small>Buttons, active titles, footer glow</small></div></div>
+    <div class="sw"><i style="background:#F44E32"></i><div><b>Logo coral</b><code>#F44E32</code><small>Logo only</small></div></div>
+    <div class="sw"><i style="background:#121212"></i><div><b>Ink</b><code>#121212</code><small>Header, hero, dark bands</small></div></div>
+    <div class="sw"><i style="background:#1E1E1E"></i><div><b>Graphite</b><code>#1E1E1E</code><small>Platform Hub band</small></div></div>
+    <div class="sw"><i style="background:#FAFAFA;box-shadow:inset 0 -1px 0 #e8e3e0"></i><div><b>Paper</b><code>#FAFAFA</code><small>All light sections</small></div></div>
+    <div class="sw"><i style="background:#2E2E2E"></i><div><b>Body text</b><code>#2E2E2E</code><small>Paragraphs on light</small></div></div>
+  </div>
+  <div class="panel">
+    <div class="row"><span class="tag t-hi">Drift</span><h4>Colors that appear on the site with no role in the system</h4></div>
+    <div class="drift" aria-label="Off-system colors">
+      <i style="background:linear-gradient(90deg,#c86b16,#e3a128)" title="Hub orange"></i><i style="background:linear-gradient(90deg,#5b2bbf,#8b3fd6)" title="Hub purple"></i><i style="background:linear-gradient(90deg,#b0164e,#d7336f)" title="Hub pink"></i><i style="background:linear-gradient(90deg,#1f8a2e,#4cbb3d)" title="Hub green"></i><i style="background:linear-gradient(90deg,#23308f,#3c52c9)" title="Hub blue"></i><i style="background:linear-gradient(90deg,#1d5c8f,#2f86c2)" title="Hub teal"></i><i style="background:#f6dfe0"></i><i style="background:#f3e8dc"></i><i style="background:#dfeef0"></i><i style="background:#ece3f4"></i><i style="background:#1f6fd1" title="Scroll-to-top blue"></i><i style="background:#046BD2" title="Theme blue"></i><i style="background:#6EC1E4"></i><i style="background:#61CE70"></i><i style="background:#ff0000"></i>
+    </div>
+    <p class="small muted">Left to right: six Platform Hub gradients | four pastel icon circles in the Advantage block | the blue scroll-to-top button | leftover theme globals (Astra blue, Elementor cyan and green) | pure red #FF0000 on the blog and ZipDash pages.</p>
+  </div>
+
+  <h3 style="margin-top:12px">Type: two fonts in the system, seven on the site</h3>
+  <div class="fonts">
+    <div class="fnt"><span class="aa" style="font-family:Lato;font-weight:700">Aa</span><b>Lato <span class="tag t-ok" style="margin-left:6px">Core</span></b><small>Every heading and the nav. Set at 500 and 600, which Lato on Google does not ship, so they render as 400 and 700.</small></div>
+    <div class="fnt"><span class="aa" style="font-family:Inter;font-weight:600">Aa</span><b>Inter <span class="tag t-ok" style="margin-left:6px">Core</span></b><small>Body, buttons, stat numbers.</small></div>
+    <div class="fnt"><span class="aa" style="font-family:'Poppins','Trebuchet MS',sans-serif;font-weight:600">Aa</span><b>Poppins <span class="tag t-hi" style="margin-left:6px">In images</span></b><small>Baked into the Platform Hub and Advantage PNGs. Cannot be edited or indexed.</small></div>
+    <div class="fnt"><span class="aa" style="font-family:Roboto,Arial,sans-serif">Aa</span><b>Roboto <span class="tag t-md" style="margin-left:6px">Leak</span></b><small>Stat labels, from Elementor defaults.</small></div>
+    <div class="fnt"><span class="aa" style="font-family:system-ui">Aa</span><b>System font <span class="tag t-md" style="margin-left:6px">Leak</span></b><small>Most text on the blog index.</small></div>
+    <div class="fnt"><span class="aa" style="font-family:'DM Sans',Manrope,sans-serif">Aa</span><b>Manrope + DM Sans <span class="tag t-lo" style="margin-left:6px">Unused</span></b><small>Loaded on every page for one element each.</small></div>
+  </div>
+
+  <h3 style="margin-top:12px">Graphics: one good style, three that clash</h3>
+  <div class="cmp">
+    <figure><div class="shot"><img src="img/c_sectors.jpg" alt="Sectors diagram"></div><figcaption><span class="tag t-ok">On brand</span> <b>Sectors diagram.</b> Ink, coral, the Z mark, simple white icons. Use this as the template.</figcaption></figure>
+    <figure><div class="shot"><img src="img/c_hub.jpg" alt="Platform Hub graphic"></div><figcaption><span class="tag t-hi">Off brand</span> <b>Platform Hub.</b> Rainbow pills, a second color system, Poppins text inside a PNG.</figcaption></figure>
+    <figure><div class="shot"><img src="img/c_adv.jpg" alt="Advantage icons"></div><figcaption><span class="tag t-hi">Off brand</span> <b>Advantage icons.</b> Multicolor stock clip-art on pastel circles, text baked into images.</figcaption></figure>
+    <figure><div class="shot"><img src="img/c_tms.jpg" alt="TMS section with stock photo"></div><figcaption><span class="tag t-md">Mixed</span> <b>TMS section.</b> Generic stock photo of a delivery, softened by a real tracking card on top.</figcaption></figure>
+  </div>
+
+  <h3 style="margin-top:12px">Consistency across the site</h3>
+  <div class="scroll"><table class="matrix">
+    <thead><tr><th>Element</th><th>System</th><th>What ships</th><th>Status</th></tr></thead>
+    <tbody>
+      <tr><td>Primary color</td><td>Coral #D54029</td><td>Used correctly on every CTA</td><td><span class="tag t-ok">Consistent</span></td></tr>
+      <tr><td>Backgrounds</td><td>Ink #121212 and Paper #FAFAFA</td><td>Alternating bands, used well</td><td><span class="tag t-ok">Consistent</span></td></tr>
+      <tr><td>Headings</td><td>Lato</td><td>Lato, plus Poppins inside images</td><td><span class="tag t-md">Mostly</span></td></tr>
+      <tr><td>Body</td><td>Inter</td><td>Inter, Roboto, system font on blog</td><td><span class="tag t-md">Mostly</span></td></tr>
+      <tr><td>Icons</td><td>One style</td><td>Material Symbols, flat clip-art, Font Awesome</td><td><span class="tag t-hi">Inconsistent</span></td></tr>
+      <tr><td>Illustration</td><td>Isometric 3D + on-brand diagrams</td><td>Plus rainbow hub, stock photo, clip-art</td><td><span class="tag t-hi">Inconsistent</span></td></tr>
+      <tr><td>Brand name</td><td>Zippyy</td><td>Zippyy, Zippy, Zippvy, Zippyy Ai, GoDash, Godash</td><td><span class="tag t-hi">Inconsistent</span></td></tr>
+      <tr><td>Heading case</td><td>One rule</td><td>Title Case on home, sentence case on pricing</td><td><span class="tag t-md">Mixed</span></td></tr>
+      <tr><td>Logo</td><td>One master file</td><td>Same SVG everywhere, no variants</td><td><span class="tag t-md">Thin</span></td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<!-- MESSAGING -->
+<section id="messaging">
+  <div class="sh"><span class="eyebrow">Positioning</span><h2>One website, two different companies</h2><p class="muted">The homepage sells an enterprise "Agentic AI" supply chain platform. The pricing page sells a ₹30-a-shipment courier aggregator. A visitor cannot tell which one Zippyy is.</p></div>
+  <div class="pmap" role="img" aria-label="Positioning map. Zippyy appears in two places: enterprise AI platform on the homepage and SMB courier aggregator on the pricing page.">
+    <div class="ax x"></div><div class="ax y"></div>
+    <span class="al" style="left:6%;top:calc(50% + 10px)">Self-serve SMB</span>
+    <span class="al" style="right:6%;top:calc(50% + 10px)">Enterprise</span>
+    <span class="al" style="left:calc(50% + 10px);top:8%">AI orchestration platform</span>
+    <span class="al" style="left:calc(50% + 10px);bottom:8%">Courier aggregator</span>
+    <svg viewBox="0 0 100 62.5" preserveAspectRatio="none" aria-hidden="true"><line x1="24" y1="49" x2="74" y2="15" stroke="#d54029" stroke-width=".4" stroke-dasharray="1.4 1"/></svg>
+    <div class="dot" style="left:16%;top:68%"><i></i>Shiprocket</div>
+    <div class="dot" style="left:30%;top:84%"><i></i>NimbusPost</div>
+    <div class="dot" style="left:12%;top:86%"><i></i>iThink</div>
+    <div class="dot" style="left:44%;top:60%"><i></i>ClickPost</div>
+    <div class="dot" style="left:84%;top:30%"><i></i>Shipsy</div>
+    <div class="dot" style="left:88%;top:44%"><i></i>FarEye</div>
+    <div class="dot" style="left:66%;top:36%"><i></i>Locus</div>
+    <div class="dot z" style="left:24%;top:78%"><i></i>Zippyy pricing page</div>
+    <div class="dot z" style="left:74%;top:24%;flex-direction:column-reverse"><i></i>Zippyy homepage</div>
+  </div>
+  <p class="small muted">Placement is our read of each company's main pitch. The dashed line is the gap a visitor has to cross.</p>
+  <div class="stories">
+    <div class="story"><span class="tag t-lo">Homepage</span><q>Native AI-Driven platform for the Self-Sufficient Supply Chain</q><small>Enterprise, abstract, global</small></div>
+    <div class="story"><span class="tag t-lo">Pricing</span><q>Choose a plan that works best for you</q><small>SMB, ₹30 per shipment, 25+ couriers</small></div>
+    <div class="story"><span class="tag t-lo">ZipDash</span><q>Introducing Same &amp; Next Day Delivery for D2C Brands</q><small>A delivery service, not software</small></div>
+    <div class="story"><span class="tag t-lo">Blog</span><q>What's the best Shiprocket alternative for ecommerce shipping?</q><small>Aggregator, compared with Shiprocket</small></div>
+  </div>
+  <h3>The same claim, different numbers on different pages</h3>
+  <div class="claims">
+    <div class="claim"><h4>How many clients</h4><div class="vals"><div class="val"><b>100+</b><span>Partner page</span></div><div class="val"><b>500</b><span>Customers page</span></div><div class="val"><b>1</b><span>Case story shown (Zalora)</span></div></div></div>
+    <div class="claim"><h4>How many carriers or 3PLs</h4><div class="vals"><div class="val"><b>25+</b><span>Pricing</span></div><div class="val"><b>150+</b><span>TMS page</span></div><div class="val"><b>180+</b><span>Homepage</span></div><div class="val"><b>190+</b><span>Homepage stats</span></div></div></div>
+    <div class="claim"><h4>NDR result</h4><div class="vals"><div class="val"><b>+45%</b><span>Nav menu</span></div><div class="val"><b>50% quicker</b><span>NDR page</span></div></div></div>
+    <div class="claim"><h4>Early COD</h4><div class="vals"><div class="val"><b>80% in 2 days</b><span>Nav menu</span></div><div class="val"><b>24 to 48 h</b><span>Product page</span></div><div class="val"><b>Daily</b><span>Pricing</span></div></div></div>
+  </div>
+  <div class="panel">
+    <h4>Voice today</h4>
+    <p>Long Title Case headlines stacked with "AI-Native", "Agentic AI", "Self-Sufficient", "Seamless" and "Unified". Concrete benefits (fewer RTOs, faster COD, cheaper shipping) are buried on product pages. Spelling mixes UK "fulfil" with US "optimizing".</p>
+  </div>
+</section>
+
+<!-- BLOG -->
+<section id="blog">
+  <div class="sh"><span class="eyebrow">Blog</span><h2>12 posts, five different stories, none of them the homepage's</h2><p class="muted">Every post was read in full. None mention Agentic AI, TMS, ZipDash or Early COD, the products the site leads with.</p></div>
+  <div class="mini">
+    <div><b class="num">12</b><span>Posts live</span></div>
+    <div><b class="num">0</b><span>Links to product pages</span></div>
+    <div><b class="num">5</b><span>Different positionings</span></div>
+    <div><b class="num">3</b><span>Dates on one post</span></div>
+    <div><b class="num">1</b><span>Empty page published</span></div>
+    <div><b class="num">1</b><span>Post copied from a competitor</span></div>
+  </div>
+  <div class="panel">
+    <h4>What each post says Zippyy is</h4>
+    <div class="stackbar" role="img" aria-label="Posts by positioning: UK export partner 5, AI RTO tool 3, B2B tracking 1, B2B courier 1, Shiprocket alternative 1, empty 1">
+      <i style="flex:5;background:#121212">UK export partner | 5</i><i style="flex:3;background:#D54029">AI RTO tool | 3</i><i style="flex:1;background:#6b6461">B2B tracking</i><i style="flex:1;background:#8f8783">B2B courier</i><i style="flex:1;background:#b5aeaa;color:#121212">Shiprocket alt.</i><i style="flex:1;background:#e3dedb;color:#68615e">Empty</i>
+    </div>
+    <p class="small muted">Homepage story (enterprise Agentic AI platform): 0 posts | Pricing story (₹30 multi-courier shipping): 1 post</p>
+  </div>
+  <div class="panel">
+    <h4>One post, three dates</h4>
+    <div class="timeline" role="img" aria-label="Timeline: card date August 2022, company incorporated October 2023, post body date May 2025, India UK deal signed July 2025, schema date December 2025">
+      <div class="tl-line"></div>
+      <div class="tl" style="left:4%"><i class="bad"></i><b>Aug 2022</b><span>Date on the blog card</span></div>
+      <div class="tl" style="left:27%"><i></i><b>Oct 2023</b><span>Company incorporated</span></div>
+      <div class="tl" style="left:55%"><i class="bad"></i><b>May 2025</b><span>Date inside the post</span></div>
+      <div class="tl" style="left:72%"><i></i><b>Jul 2025</b><span>India UK deal signed</span></div>
+      <div class="tl" style="left:93%"><i class="bad"></i><b>Dec 2025</b><span>Date in the page code</span></div>
+    </div>
+    <p class="small muted">Posts say the India UK agreement was "recently signed" in a post dated before the signing, and are dated on the card before the company existed.</p>
+  </div>
+  <div class="ev">
+    <figure><div class="shot"><img src="img/top_blog.jpg" alt=""></div><figcaption><span class="tag t-hi">Structure</span><b>The blog page heading says "Brochures"</b><span>/blog/ has no H1. Its page 2, 3 and 4 serve the same content.</span></figcaption></figure>
+    <figure><div class="shot"><img src="img/x_bp_shipway.jpg" alt=""></div><figcaption><span class="tag t-hi">Copied</span><b>"Shipway does not take responsibility..."</b><span>The Shiprocket alternative post carries a competitor's own disclaimer.</span></figcaption></figure>
+    <figure><div class="shot"><img src="img/x_bp_shiprocket_ev0.jpg" alt=""></div><figcaption><span class="tag t-hi">Spelling</span><b>"Zeppy Vs Ship Rocket"</b><span>The comparison table names the brand "Zeppy".</span></figcaption></figure>
+    <figure><div class="shot"><img src="img/bp_rto_top.jpg" alt=""></div><figcaption><span class="tag t-md">Spelling</span><b>"Zippy's" 13 times in the RTO post</b><span>Ends with a box pointing to www.zippy.ai, a different, parked domain.</span></figcaption></figure>
+    <figure><div class="shot"><img src="img/bp_ithink_top.jpg" alt=""></div><figcaption><span class="tag t-md">Empty</span><b>The iThink alternative post has no content</b><span>Published page shows only the demo band and footer.</span></figcaption></figure>
+    <figure><div class="shot"><img src="img/x_bp_index_ev0.jpg" alt=""></div><figcaption><span class="tag t-md">Duplicates</span><b>Three RTO posts, five India UK posts</b><span>Same skeleton and numbers. They compete with each other in search.</span></figcaption></figure>
+  </div>
+  <div class="scroll"><table class="tbl">
+    <thead><tr><th>Post</th><th>Words</th><th>Says Zippyy is</th><th>Main problem</th></tr></thead>
+    <tbody>
+      <tr><td>Reducing RTO with Zippyy's AI-Powered Risk Score</td><td class="num">394</td><td>AI RTO tool</td><td>"Zippy" 13 times, 2022 date</td></tr>
+      <tr><td>How Zippyy's AI RTO Risk Score Enhances eCommerce</td><td class="num">364</td><td>AI RTO tool</td><td>support@godash.ai, stray "6 40%"</td></tr>
+      <tr><td>AI-Powered RTO Risk Score</td><td class="num">300</td><td>AI RTO tool</td><td>10M vs "100 million+", empty results block</td></tr>
+      <tr><td>How Zippyy Empowers Indian Exporters (x2)</td><td class="num">444 | 478</td><td>UK export partner</td><td>Same H1 twice, 56% text overlap</td></tr>
+      <tr><td>Exporting Made Easy</td><td class="num">522</td><td>UK export partner</td><td>Unnamed client story</td></tr>
+      <tr><td>Global Logistics</td><td class="num">458</td><td>UK export partner</td><td>Card title "GGlobal", typos</td></tr>
+      <tr><td>India UK Trade Agreement: A New Era</td><td class="num">554</td><td>UK export partner</td><td>90% and 85% for the same claim</td></tr>
+      <tr><td>Track Delivery Smarter (B2B)</td><td class="num">645</td><td>B2B tracking</td><td>Stray code "modes.p&gt;"</td></tr>
+      <tr><td>Courier Services for B2B</td><td class="num">626</td><td>B2B courier</td><td>Not on the blog index</td></tr>
+      <tr><td>Alternative to Ship Rocket</td><td class="num">570</td><td>Shiprocket alternative</td><td>Copied from Shipway, "Zeppy", index link 404s</td></tr>
+      <tr><td>Best iThink Logistics alternative</td><td class="num">0</td><td>Nothing</td><td>Empty page</td></tr>
+    </tbody>
+  </table></div>
+  <div class="gb">
+    <div class="panel"><h4><span class="tag t-ok">Working</span> Worth keeping</h4><ul class="ul"><li>Topics with real search demand: Shiprocket alternative, RTO</li><li>Each post has a single, keyword-led H1</li><li>The two B2B posts are the longest and most coherent</li><li>Comparison-table format converts well once rewritten</li></ul></div>
+    <div class="panel"><h4><span class="tag t-lo">Plan</span> Five content pillars</h4><ul class="ul"><li><b>Shiprocket alternative</b> rewritten from Zippyy's own pricing</li><li><b>Reduce RTO in India</b>: one guide, merge the three posts</li><li><b>India UK trade deal for exporters</b>: one factual post</li><li><b>AI transportation management</b>: the homepage story</li><li><b>COD remittance and NDR</b>: tied to pricing tiers</li></ul></div>
+  </div>
+</section>
+
+<!-- SEO -->
+<section id="seo">
+  <div class="sh"><span class="eyebrow">SEO</span><h2>Easy to crawl, poorly described</h2><p class="muted">All 44 pages crawled. Speed from a Lighthouse lab run, because Google's PageSpeed service hit its daily limit. Traffic and backlink data were not available on the current Ahrefs plan.</p></div>
+  <div class="gauges" id="gauges"></div>
+  <p class="small muted">The SEO score of 100 is for the homepage only, which is the one page with a meta description. Site-wide, the picture below is weaker.</p>
+  <div class="gb">
+    <div class="panel"><h4>Mobile speed against Google's targets</h4><div class="bars" id="cwv"></div></div>
+    <div class="panel"><h4>Share of the 44 pages with each problem</h4><div class="bars" id="cover"></div></div>
+  </div>
+  <h3>How the homepage looks in Google</h3>
+  <div class="ba">
+    <div><span class="lab"><span class="tag t-hi">Now</span>69 characters, cut off, brand misspelled twice</span>
+      <div class="serp"><span class="u"><i><img src="logo.svg" alt="" style="width:20px"></i>zippyy.ai</span><span class="t">AI Powered Logistics Solution - logistic software provider -Zippyy ...</span><span class="d">Zippy AI is an AI powered logistics solution offering smart logistics software for route optimization, real-time tracking..</span></div>
+    </div>
+    <div><span class="lab"><span class="tag t-ok">Proposed</span>46 and 128 characters</span>
+      <div class="serp"><span class="u"><i><img src="logo.svg" alt="" style="width:20px"></i>zippyy.ai</span><span class="t">AI Shipping Software for D2C Brands | Zippyy AI</span><span class="d">Ship with 25+ couriers from ₹30, cut RTO with AI address checks and get COD in 24 to 48 hours. Start free, no card needed.</span></div>
+    </div>
+  </div>
+  <h3>How a shared link looks on LinkedIn or WhatsApp</h3>
+  <div class="ba">
+    <div><span class="lab"><span class="tag t-hi">Now</span>Share image is an http SVG, platforms show nothing</span>
+      <div class="og"><div class="im">No preview image</div><div class="tx"><small>zippyy.ai</small><b>AI Powered Logistics Solution - logistic software provider -Zippyy Ai</b><span>Zippy AI is an AI powered logistics solution...</span></div></div>
+    </div>
+    <div><span class="lab"><span class="tag t-ok">Proposed</span>1200 x 630 PNG in brand colors</span>
+      <div class="og"><div class="im good"><img src="logo.svg" alt="" style="width:110px"><b>Ship every order from one dashboard.</b></div><div class="tx"><small>zippyy.ai</small><b>AI Shipping Software for D2C Brands | Zippyy AI</b><span>25+ couriers from ₹30. COD in 24 to 48 hours.</span></div></div>
+    </div>
+  </div>
+  <h3>Technical checklist</h3>
+  <div class="scroll"><table class="tbl">
+    <thead><tr><th>Check</th><th>Status</th><th>Detail</th></tr></thead>
+    <tbody>
+      <tr><td>HTTPS and redirects</td><td><span class="tag t-ok">Good</span></td><td>http to https in one hop. godash.ai redirects to zippyy.ai, which keeps old links working.</td></tr>
+      <tr><td>Canonical tags</td><td><span class="tag t-ok">Good</span></td><td>Every page points to itself.</td></tr>
+      <tr><td>robots.txt</td><td><span class="tag t-ok">Good</span></td><td>Nothing blocked. The sitemap line uses http, not https.</td></tr>
+      <tr><td>Sitemap</td><td><span class="tag t-md">Fix</span></td><td>44 pages. Child sitemaps on http. Includes two Elementor header and footer URLs that redirect. No post sitemap, blog posts are pages.</td></tr>
+      <tr><td>Meta descriptions</td><td><span class="tag t-hi">Missing</span></td><td>43 of 44 pages have none.</td></tr>
+      <tr><td>H1 headings</td><td><span class="tag t-hi">Missing</span></td><td>No H1 on 30 pages, including the homepage. Pricing has five. The menu uses 14 H6 tags on every page.</td></tr>
+      <tr><td>Titles</td><td><span class="tag t-md">Weak</span></td><td>20 under 30 characters ("Blog - Zippyy AI"), 12 over 60. Two posts share the same title.</td></tr>
+      <tr><td>Share images</td><td><span class="tag t-md">Broken</span></td><td>http on 35 pages, SVG on home and pricing, none on 5 pages.</td></tr>
+      <tr><td>Structured data</td><td><span class="tag t-lo">Basic</span></td><td>WebPage and breadcrumbs only. No Organization, SoftwareApplication or Article.</td></tr>
+      <tr><td>Images</td><td><span class="tag t-md">Fix</span></td><td>1,414 of 1,620 have empty alt text. One 1.3 MB PNG on the homepage.</td></tr>
+      <tr><td>Mixed content</td><td><span class="tag t-md">Fix</span></td><td>66 asset links still on http, hidden by a browser upgrade header.</td></tr>
+      <tr><td>Scripts and fonts</td><td><span class="tag t-md">Heavy</span></td><td>582 KB of JavaScript, a 171 KB popup script 78% unused, 14 font files.</td></tr>
+      <tr><td>Links</td><td><span class="tag t-lo">Minor</span></td><td>1 broken link on the blog index, 6 pages with no internal links pointing to them.</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<!-- EVIDENCE -->
+<section id="evidence">
+  <div class="sh"><span class="eyebrow">Evidence</span><h2>What a visitor can read today</h2><p class="muted">Live pages, captured 5 Oct 2026. The red outline marks the problem text.</p></div>
+  <div class="ev">
+    <figure><div class="shot"><img src="img/x_ev_shipsy_tms.jpg" alt=""></div><figcaption><span class="tag t-hi">Competitor</span><b>"Shipsy TMS" on the TMS page</b><span>/transportation-management-system/, first paragraph under the hero.</span></figcaption></figure>
+    <figure><div class="shot"><img src="img/x_ev_shipsy_customers.jpg" alt=""></div><figcaption><span class="tag t-hi">Competitor</span><b>"Shipsy's Intelligent Logistics Management Platform"</b><span>/our-customers/, hero paragraph.</span></figcaption></figure>
+    <figure><div class="shot"><img src="img/x_ev_shipsy_partner.jpg" alt=""></div><figcaption><span class="tag t-hi">Competitor</span><b>"Shipsy guarantees..." and "priorities at Shipsy"</b><span>/partner-with-us/, including an ISO 27001 claim made in Shipsy's name.</span></figcaption></figure>
+    <figure><div class="shot"><img src="img/x_ev_jmc.jpg" alt=""></div><figcaption><span class="tag t-hi">Other company</span><b>"working at JMC (Japan Marketing &amp; Consultancy Limited)"</b><span>/careers/, why-join section.</span></figcaption></figure>
+    <figure><div class="shot"><img src="img/x_ev_superdope.jpg" alt=""></div><figcaption><span class="tag t-hi">Template text</span><b>"Understand how Superdope works"</b><span>FAQ block repeated on 18 pages, including pricing, TMS, about and ZipDash.</span></figcaption></figure>
+    <figure><div class="shot"><img src="img/x_ev_godash_email.jpg" alt=""></div><figcaption><span class="tag t-md">Old brand</span><b>support@godash.ai as the contact email</b><span>/contact-us/ and the footer FAQ block.</span></figcaption></figure>
+    <figure><div class="shot"><img src="img/x_ev_godash_about.jpg" alt=""></div><figcaption><span class="tag t-md">Old brand</span><b>Investors listed at "Godash Technologies"</b><span>/about-us/, all four board members.</span></figcaption></figure>
+    <figure><div class="shot"><img src="img/x_ev_zippvy.jpg" alt=""></div><figcaption><span class="tag t-md">Typo</span><b>"Zippvy enables regional service providers"</b><span>/partner-with-us/.</span></figcaption></figure>
+    
+  </div>
+</section>
+
+<!-- TRACKER -->
+<section id="tracker">
+  <div class="sh"><span class="eyebrow">Issue tracker</span><h2>Every problem, in one list</h2><p class="muted">Filter by area or priority. Owner says who can fix it.</p></div>
+  <div class="filters" id="fArea"><span>Area</span></div>
+  <div class="filters" id="fSev"><span>Priority</span></div>
+  <div class="count" id="trkCount"></div>
+  <div class="scroll" style="max-height:760px;overflow-y:auto"><table class="trk"><thead><tr><th>ID</th><th>Priority</th><th>Issue</th><th>Where</th><th>Fix</th><th>Owner</th></tr></thead><tbody id="trkBody"></tbody></table></div>
+</section>
+
+<!-- IMPROVE -->
+<section id="improve">
+  <div class="sh"><span class="eyebrow">Improvements</span><h2>Before and after</h2><p class="muted">Concepts built in Zippyy's own colors and fonts. Copy is a suggestion for the team to adapt.</p></div>
+
+  <h3>1. Hero: lead with the outcome</h3>
+  <div class="ba">
+    <div><span class="lab"><span class="tag t-hi">Now</span>Abstract and long</span><div class="shot fit dk"><img src="img/c_hero.jpg" alt="Current hero"></div></div>
+    <div><span class="lab"><span class="tag t-ok">Proposed</span>Specific, one promise, two paths</span>
+      <div class="mock ink"><h3 class="z">Fewer failed deliveries. Faster COD. One shipping dashboard.</h3><p class="z">Zippyy picks the right courier for every order, confirms addresses with AI calls and settles COD in 24 to 48 hours. From ₹30 a shipment.</p><div class="row"><button class="zb" type="button">Start free</button><button class="zb g" type="button">Book an enterprise demo</button></div></div>
+    </div>
+  </div>
+
+  <h3>2. Platform Hub: redraw in the Sectors style</h3>
+  <div class="ba">
+    <div><span class="lab"><span class="tag t-hi">Now</span>Six gradients, text inside a PNG</span><div class="shot fit dk"><img src="img/c_hub.jpg" alt="Current Platform Hub"></div></div>
+    <div><span class="lab"><span class="tag t-ok">Proposed</span>Ink, one coral accent, live text</span>
+      <div class="mock ink" style="padding:0"><div class="hubm">
+        <span class="p l">Order sources</span><span class="c">Zippyy<br>platform</span><span class="p">Delivery options</span>
+        <span class="p l">Fulfillment hubs</span><span class="p">Customer experience</span>
+        <span class="p l">Carrier marketplace</span><span class="p">Shipping network</span>
+      </div></div>
+    </div>
+  </div>
+
+  <h3>3. Testimonials: real people, real results</h3>
+  <div class="ba">
+    <div><span class="lab"><span class="tag t-hi">Now</span>Placeholder avatar, old brand name</span>
+      <div class="mock paper"><div class="tcard"><div class="who"><span class="av">&#9679;</span><div><b>Lara Williams</b><span class="co">COO - Bit2Big</span></div></div><p>I've been using GoDash's logistics services for over a year now, and I can't express how impressed I'm with their efficiency and reliability.</p><span style="color:#F4A340;letter-spacing:2px">★★★★★</span></div></div>
+    </div>
+    <div><span class="lab"><span class="tag t-ok">Proposed</span>Full name, company, one number</span>
+      <div class="mock paper"><span class="ex">Example layout. Replace with a real, approved quote</span><div class="tcard"><span class="metric">RTO down 18%</span><p>"We moved 4,000 orders a month to Zippyy and stopped chasing couriers for COD."</p><div class="who"><span class="av n">AK</span><div><b>Full name</b><span class="co">Role, Brand name | Customer since 2025</span></div></div></div></div>
+    </div>
+  </div>
+
+  <h3>4. Stats: only what you can prove</h3>
+  <div class="ba">
+    <div><span class="lab"><span class="tag t-hi">Now</span>Unsourced scale claims</span><div class="shot fit"><img src="img/c_stats.jpg" alt="Current stats"></div></div>
+    <div><span class="lab"><span class="tag t-ok">Proposed</span>Product facts already on the site</span>
+      <div class="mock paper"><div class="statsm"><div><b>₹30</b><span>Starting price per shipment<sup>1</sup></span></div><div><b>25+</b><span>Courier partners<sup>1</sup></span></div><div><b>24 to 48 h</b><span>COD remittance<sup>2</sup></span></div><div><b>₹50,000</b><span>Cover per shipment<sup>3</sup></span></div></div><span style="font:400 12.5px Inter,sans-serif;color:#777">Sources: 1 Pricing page | 2 Early COD page | 3 Zippyy Protect page</span></div>
+    </div>
+  </div>
+
+  <h3>5. Mobile demo band: one short line</h3>
+  <div class="ba">
+    <div><span class="lab"><span class="tag t-hi">Now</span>Breaks into four lines</span><div class="shot" style="max-width:300px;width:100%"><img src="img/m_cta.jpg" alt="Current mobile CTA"></div></div>
+    <div><span class="lab"><span class="tag t-ok">Proposed</span>Fits in two lines at 390px</span>
+      <div class="mock ink" style="max-width:300px;width:100%;align-items:flex-start"><h3 class="z" style="font-size:26px">See Zippyy live in 20 minutes</h3><p class="z" style="font-size:14px">Tell us how you ship today. We'll show you what changes.</p><button class="zb" type="button">Book a demo</button></div>
+    </div>
+  </div>
+</section>
+
+<!-- STRATEGY -->
+<section id="strategy">
+  <div class="sh"><span class="eyebrow">Brand strategy</span><h2>How to make Zippyy a stronger brand</h2><p class="muted">A designer and marketer's plan: pick one story, prove it, give it a complete visual system, and fill the gaps buyers notice.</p></div>
+
+  <h3>1. Pick one story to lead with</h3>
+  <div class="opts">
+    <div class="opt rec"><div class="row" style="justify-content:space-between"><span class="tag t-ok">Recommended now</span><span class="small muted">Proof ready</span></div><h4>The shipping platform for Indian D2C brands</h4><p>Lead with what is priced, live and provable today: multi-courier shipping, NDR, Early COD, pre-order risk checks, ZipDash.</p><div class="ready"><span>Pricing public</span><i style="--v:100%"></i><span>Product pages</span><i style="--v:90%"></i><span>Customer logos</span><i style="--v:70%"></i><span>Case studies</span><i style="--v:15%"></i></div></div>
+    <div class="opt"><div class="row" style="justify-content:space-between"><span class="tag t-lo">Second track</span><span class="small muted">Proof missing</span></div><h4>Agentic AI platform for enterprise logistics</h4><p>The current homepage story. Needs named enterprise customers, security pages and results before it can lead.</p><div class="ready"><span>Pricing public</span><i style="--v:0%"></i><span>Product pages</span><i style="--v:70%"></i><span>Customer logos</span><i style="--v:10%"></i><span>Case studies</span><i style="--v:5%"></i></div></div>
+  </div>
+  <div class="statement">
+    <span class="eyebrow">Positioning statement</span>
+    <p>For Indian D2C brands shipping 50 to 10,000 orders a month, <b>Zippyy is the AI shipping platform that cuts failed deliveries and gets COD back faster</b>, from ₹30 a shipment. Unlike a plain courier aggregator, it confirms addresses with AI calls, picks the right courier and settles cash on its own.</p>
+  </div>
+  <div class="taglines">
+    <div><span class="small muted">Tagline option A</span><b>Delivered. And paid.</b></div>
+    <div><span class="small muted">Tagline option B</span><b>Fewer RTOs. Faster COD.</b></div>
+    <div><span class="small muted">Tagline option C</span><b>Shipping that runs itself.</b></div>
+  </div>
+
+  <h3>2. Know who you are talking to</h3>
+  <div class="segs">
+    <div class="seg"><span class="tag t-ok">Primary</span><h4>D2C founder or ops lead</h4><dl><dt>Ships</dt><dd>50 to 10,000 orders a month</dd><dt>Pain</dt><dd>RTO eating margin, COD stuck for weeks, juggling couriers</dd><dt>Needs to see</dt><dd>Price, RTO results from similar brands, setup in a day</dd><dt>Lead with</dt><dd>Shipping plans, NDR, Pre-order, Early COD</dd><dt>Send to</dt><dd>/pricing/ and a free sign-up</dd></dl></div>
+    <div class="seg"><span class="tag t-lo">Secondary</span><h4>Logistics head, mid-market</h4><dl><dt>Ships</dt><dd>B2B freight, many carriers</dd><dt>Pain</dt><dd>Freight cost, no single view, manual carrier allocation</dd><dt>Needs to see</dt><dd>Case studies, integrations, security</dd><dt>Lead with</dt><dd>TMS, Route optimization</dd><dt>Send to</dt><dd>Demo with a sales lead</dd></dl></div>
+    <div class="seg"><span class="tag t-lo">Secondary</span><h4>3PL operator</h4><dl><dt>Runs</dt><dd>Fulfillment for several brands</dd><dt>Pain</dt><dd>Client billing, label and manifest work</dd><dt>Needs to see</dt><dd>Multi-client dashboard in action</dd><dt>Lead with</dt><dd>3PL Management</dd><dt>Send to</dt><dd>Product tour video, then demo</dd></dl></div>
+  </div>
+
+  <h3>3. A message house the whole team repeats</h3>
+  <div class="house">
+    <div class="roof">Delivered. And paid. <span>Shipping that cuts failed deliveries and gets your COD back faster.</span></div>
+    <div class="pillars">
+      <div class="pil"><span class="material-symbols-rounded">local_shipping</span><b>Deliver more</b><p>AI calls confirm addresses and delivery times before the courier arrives. NDR reattempts run on WhatsApp, SMS and calls.</p><small>NDR Suite | Pre-order Suite</small></div>
+      <div class="pil"><span class="material-symbols-rounded">payments</span><b>Get paid faster</b><p>COD remittance in 24 to 48 hours instead of waiting on courier cycles.</p><small>Early COD</small></div>
+      <div class="pil"><span class="material-symbols-rounded">savings</span><b>Spend less</b><p>From ₹30 a shipment, the right courier per order, weight disputes raised for you.</p><small>Shipping plans | Weight reconciliation</small></div>
+      <div class="pil"><span class="material-symbols-rounded">visibility</span><b>See everything</b><p>One dashboard, branded tracking pages, WhatsApp updates to your customers.</p><small>Brand Tracking | Notifications</small></div>
+    </div>
+    <div class="base"><span>Plain</span><span class="sep">|</span><span>Specific</span><span class="sep">|</span><span>Indian-market fluent</span><span class="sep">|</span><span>Calm confidence</span></div>
+  </div>
+
+  <h3>4. Voice: say the outcome, then the AI</h3>
+  <div class="voice">
+    <div class="vrow"><span class="tag t-hi">Now</span><p>Native AI-Driven platform for the Self-Sufficient Supply Chain</p><span class="tag t-ok">Better</span><p>Ship more orders. Lose fewer to RTO.</p></div>
+    <div class="vrow"><span class="tag t-hi">Now</span><p>Leverage the power of AI to smartly streamline operations</p><span class="tag t-ok">Better</span><p>Zippyy calls your customer before the courier arrives.</p></div>
+    <div class="vrow"><span class="tag t-hi">Now</span><p>Deliver More Than Shipments, Deliver Experiences</p><span class="tag t-ok">Better</span><p>Your logo on every tracking page.</p></div>
+    <div class="vrow"><span class="tag t-hi">Now</span><p>Get A Real-Time Experience Of Zippyy With Our Live Demo</p><span class="tag t-ok">Better</span><p>See Zippyy live in 20 minutes.</p></div>
+  </div>
+  <div class="words"><div><span class="tag t-ok">Use</span><p>RTO | COD | courier | orders | pincode | ₹ | per shipment | your customers | in 24 hours</p></div><div><span class="tag t-hi">Avoid</span><p>leverage | seamless | revolutionize | self-sufficient | synergy | cutting-edge | world-class</p></div></div>
+
+  <h3>5. Complete the visual system</h3>
+  <div class="sys">
+    <div class="sysc">
+      <h4>Logo suite</h4>
+      <div class="lsuite">
+        <div class="lv dk"><img src="logo.svg" alt="Zippyy logo on ink"><small>Full logo, ink</small></div>
+        <div class="lv lt"><img src="logo.svg" alt="Zippyy logo on paper"><small>Full logo, paper</small></div>
+        <div class="lv dk"><svg viewBox="-3 7 32 32" class="mk" role="img" aria-label="Zippyy Z mark"><image href="logo.svg" width="143" height="48"/></svg><small>Z mark, app and avatar</small></div>
+        <div class="lv todo"><span>To commission</span><small>Mono black and mono white versions</small></div>
+      </div>
+      <p class="small muted">The Z mark is cropped from the master file, colors untouched. Mono versions should come from the original designer, never by recoloring.</p>
+    </div>
+    <div class="sysc">
+      <h4>Color proportion</h4>
+      <div class="ratio"><i style="flex:60;background:#FAFAFA;color:#121212">Paper 60%</i><i style="flex:25;background:#121212">Ink 25%</i><i style="flex:10;background:#6b6461">Grey 10%</i><i style="flex:5;background:#D54029"></i></div>
+      <p class="small muted">Coral stays at about 5%: the call to action, one key number, the Z mark. Everything else is ink, paper and grey.</p>
+      <div class="ramp2"><i style="background:#FBEDE9"></i><i style="background:#F6CFC6"></i><i style="background:#EE9A88"></i><i style="background:#E2654D"></i><i style="background:#D54029"></i><i style="background:#A93220"></i><i style="background:#6E2015"></i></div>
+      <p class="small muted">Coral tints for UI backgrounds and charts only, never for the logo.</p>
+    </div>
+    <div class="sysc">
+      <h4>Type scale</h4>
+      <div class="tscale">
+        <div><small>H1 | Lato 700 | 48/56</small><span style="font:700 40px/1.1 Lato,sans-serif">Delivered. And paid.</span></div>
+        <div><small>H2 | Lato 700 | 32/40</small><span style="font:700 28px/1.2 Lato,sans-serif">Fewer RTOs this festive season</span></div>
+        <div><small>Body | Inter 400 | 16/26</small><span style="font:400 16px/1.6 Inter,sans-serif">Zippyy calls your customer before the courier arrives.</span></div>
+        <div><small>Label | Inter 600 | 13, caps</small><span style="font:600 13px Inter,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--coral)">Early COD</span></div>
+        <div><small>Number | Inter 600, lining</small><span style="font:600 40px/1 Inter,sans-serif;font-variant-numeric:lining-nums tabular-nums">₹30 | 24 h</span></div>
+      </div>
+    </div>
+    <div class="sysc">
+      <h4>One icon style</h4>
+      <div class="icons"><span class="material-symbols-rounded">local_shipping</span><span class="material-symbols-rounded">payments</span><span class="material-symbols-rounded">call</span><span class="material-symbols-rounded">inventory_2</span><span class="material-symbols-rounded">route</span><span class="material-symbols-rounded">location_on</span><span class="material-symbols-rounded">storefront</span><span class="material-symbols-rounded">verified</span></div>
+      <p class="small muted">Material Symbols Rounded, filled, white on ink tiles. The site already exports these for menus; retire the clip-art and Font Awesome.</p>
+    </div>
+    <div class="sysc">
+      <h4>Brand device: route lines</h4>
+      <div class="device"><img src="assets/Group-1321314964-1024x293.png" alt="Sectors diagram with the Z mark and coral route lines"></div>
+      <p class="small muted">The coral route lines from the Sectors diagram become the signature graphic for posts, slides and covers, always on ink with the grid texture.</p>
+    </div>
+    <div class="sysc">
+      <h4>Imagery direction</h4>
+      <ul class="ul"><li><b>Use</b> real product screens, the isometric fleet art, real Indian packers, riders and founders</li><li><b>Shoot</b> warehouse floors, packing tables, delivery doorsteps in daylight</li><li><b>Avoid</b> Western stock models, rainbow gradients, flat clip-art</li></ul>
+    </div>
+  </div>
+
+  <h3>6. What a buyer looks for and can't find</h3>
+  <div class="gapmap" id="gapmap"></div>
+  <p class="small muted">Checked on the live site, 5 Oct 2026. "Missing" means the page or element does not exist or returns a 404. Tag color shows priority.</p>
+
+  <h3>7. The buyer journey today</h3>
+  <div class="journey" id="journey"></div>
+
+  <h3>8. What to do first: impact against effort</h3>
+  <div class="matrix2" role="img" aria-label="Impact versus effort matrix of brand initiatives">
+    <div class="q" style="left:3%;top:4%">Quick wins</div><div class="q" style="left:53%;top:4%">Big bets</div><div class="q lo" style="left:3%;top:54%">Fill-ins</div><div class="q lo" style="left:53%;top:54%">Later</div>
+    <span class="mx-l" style="left:0;bottom:-28px">Higher on the chart = more impact | Further right = more effort | Coral = do in the first 30 days</span>
+    <div id="mxdots"></div>
+  </div>
+  <div class="plan3">
+    <div class="wk"><span class="w">0 to 30 days | Clean</span><ul><li>Remove competitor, GoDash and template text</li><li>Fix "See live", Videos and Calendly links</li><li>One H1, titles, descriptions, share image</li><li>Hide unverified stats and testimonials</li></ul></div>
+    <div class="wk"><span class="w">30 to 90 days | Prove</span><ul><li>Rewrite homepage around the D2C story</li><li>Three named case studies with RTO and COD numbers</li><li>Security page, integrations directory with logos</li><li>Social program: 3 posts a week, see below</li></ul></div>
+    <div class="wk"><span class="w">90 to 180 days | Grow</span><ul><li>Free tools: shipping rate calculator, RTO risk checker</li><li>Comparison pages vs Shiprocket, NimbusPost, iThink</li><li>Review profiles with real customer reviews</li><li>Enterprise track: TMS case study and demo video</li></ul></div>
+  </div>
+  <div class="panel"><h4>Measure monthly</h4><div class="kpis2"><span>Free sign-ups</span><span>Demo requests</span><span>Branded search volume</span><span>Organic clicks</span><span>Pricing page to sign-up rate</span><span>Named case studies live</span></div></div>
+</section>
+
+<!-- SOCIAL -->
+<section id="social">
+  <div class="sh"><span class="eyebrow">Social posts</span><h2>A feed nobody in Indian logistics has yet</h2><p class="muted">Twelve static posts, ready to adapt, built only from Zippyy's real logo, product screens, isometric art and facts already on the live site. Each one answers a gap found in competitor feeds.</p></div>
+
+  <h3>What the category posts today</h3>
+  <div class="field" role="img" aria-label="Approximate dominant colors of competitor Instagram feeds compared with Zippyy coral">
+    <div><i style="background:#4b2a8c"></i><span>Shiprocket<br><small>purple, navy</small></span></div>
+    <div><i style="background:#c8102e"></i><span>Delhivery<br><small>red, cinematic</small></span></div>
+    <div><i style="background:#1f4fd8"></i><span>iThink<br><small>royal blue</small></span></div>
+    <div><i style="background:#0f2440"></i><span>ClickPost<br><small>blue-black</small></span></div>
+    <div><i style="background:#6b3fa0"></i><span>Locus<br><small>purple</small></span></div>
+    <div><i style="background:#1d4ed8"></i><span>Shipsy<br><small>blue</small></span></div>
+    <div class="own"><i style="background:#D54029;box-shadow:0 0 0 4px var(--bg),0 0 0 6px #D54029"></i><span><b>Zippyy</b><br><small>coral on charcoal, unclaimed</small></span></div>
+  </div>
+  <p class="small muted">Approximate dominant hues from public profile grids, viewed 5 Oct 2026 without login.</p>
+  <div class="scroll"><table class="tbl">
+    <thead><tr><th>Brand</th><th>Followers</th><th>Mix</th><th>Best move</th><th>Weak spot</th></tr></thead>
+    <tbody>
+      <tr><td>Shiprocket</td><td class="num">72.5K</td><td>60% reels</td><td>One big number plus an illustrated scene ("2.65X orders")</td><td>Product UI almost never shown</td></tr>
+      <tr><td>Delhivery</td><td class="num">276K</td><td>Mostly video</td><td>Hindi humor hooks, festival art</td><td>Reads consumer, no pricing or product</td></tr>
+      <tr><td>iThink Logistics</td><td class="num">16.3K</td><td>Mixed</td><td>Report card: "Your product passed. Your delivery didn't."</td><td>Half office-culture reels, no pillars</td></tr>
+      <tr><td>ClickPost</td><td class="num">2.1K</td><td>Events, interviews</td><td>Hidden-cost reveal on a carrier invoice</td><td>Dark, inconsistent grid</td></tr>
+      <tr><td>Locus</td><td class="num">800</td><td>Quote cards</td><td>Systematic review quote series</td><td>Text-heavy</td></tr>
+      <tr><td>Shipsy</td><td class="num">837</td><td>Events, holidays</td><td>Holiday puns</td><td>Weakest visuals in the set</td></tr>
+      <tr><td>Razorpay (benchmark)</td><td class="num">427K</td><td>Statics</td><td>Product shown inside real-world scenes</td><td>n/a</td></tr>
+      <tr><td>CRED (benchmark)</td><td class="num">280K</td><td>Statics</td><td>One idea per tile, very consistent system</td><td>n/a</td></tr>
+    </tbody>
+  </table></div>
+  <div class="gb">
+    <div class="panel"><h4><span class="tag t-lo">Seen working</span> Patterns to borrow</h4><ul class="ul"><li><b>Bold number plus visual</b> (Shiprocket, Zoho): posts 2, 4, 8</li><li><b>One metaphor, one line</b> (iThink report card): post 11</li><li><b>Hidden-cost reveal</b> (ClickPost invoice): post 12</li><li><b>Festival tied to product</b> (Shiprocket, Delhivery): post 7</li><li><b>Quote card series</b> (Locus): post 9</li><li><b>Hindi or Hinglish hook</b> (Delhivery, iThink): post 11</li></ul></div>
+    <div class="panel"><h4><span class="tag t-ok">Open space</span> Gaps Zippyy can own</h4><ul class="ul"><li><b>Real product screens as the hero</b>: posts 5, 1</li><li><b>A price anchor nobody shows</b>: post 4</li><li><b>Speed proof</b> on COD remittance: post 2</li><li><b>A numbered seller-pain series</b>: post 10</li><li><b>Isometric art as a system</b>, not a one-off: post 1</li><li><b>Coral on charcoal</b> in a purple and blue category</li></ul></div>
+  </div>
+
+  <h3>The profile grid</h3>
+  <div class="igwrap">
+    <div class="ig">
+      <div class="ighead">
+        <span class="igav"><svg viewBox="-3 7 32 32" role="img" aria-label="Zippyy Z mark"><image href="logo.svg" width="143" height="48"/></svg></span>
+        <div><b>zippyy.ai</b><p>AI shipping for Indian D2C brands. From ₹30 a shipment. Fewer RTOs, faster COD.</p><span class="iglink">zippyy.ai/pricing</span></div>
+      </div>
+      <div class="iggrid" id="iggrid"></div>
+    </div>
+    <div class="stack">
+      <div class="panel"><h4>Why the grid works</h4><ul class="ul"><li>Charcoal and paper alternate, so the feed reads as a checkerboard from a distance</li><li>Coral appears once per post, which makes the brand recognizable before anyone reads</li><li>Every post has the same frame: label top-left, logo bottom-left, link bottom-right</li><li>Text stays 88px from the edges, so Instagram's 3:4 grid crop never cuts it</li></ul></div>
+      <div class="panel"><h4>Content mix</h4><div class="bars" id="mix"></div><p class="small muted">Instagram 4 posts a week plus 1 reel | LinkedIn 3 posts a week, same artwork | Daily from now until Diwali</p></div>
+    </div>
+  </div>
+
+  <h3>Every post, with its caption</h3>
+  <div class="posts" id="posts"></div>
+
+  <h3>First three weeks</h3>
+  <div class="cal" id="cal"></div>
+
+  <h3>Rules for every post</h3>
+  <div class="rules">
+    <div class="rule"><b>One idea per tile</b><span>One headline, one proof point, one action.</span></div>
+    <div class="rule"><b>Coral once</b><span>The key number, word or icon. Labels on charcoal use the lighter coral for contrast.</span></div>
+    <div class="rule"><b>Headlines under 9 words</b><span>Lato Bold, sentence case, no Title Case.</span></div>
+    <div class="rule"><b>Numbers in Inter</b><span>Lining figures, never smaller than the text next to them.</span></div>
+    <div class="rule"><b>Real visuals only</b><span>Product screens, isometric art, Material icons. No stock, no clip-art.</span></div>
+    <div class="rule"><b>Every figure traceable</b><span>From a live Zippyy page or a named customer. Examples are labeled.</span></div>
+  </div>
+  <div class="panel">
+    <h4><span class="tag t-md">Verify before use</span> Market numbers worth checking for future posts</h4>
+    <ul class="ul">
+      <li>D2C RTO rates of 20 to 30%, higher for COD (vendor blog, base.com)</li>
+      <li>Standard COD remittance cycles of 7 days or more (vendor blogs, icarry.in, kwikfy.com)</li>
+      <li>Failed delivery cost of ₹180 to ₹240 per order (vendor blog, icarry.in)</li>
+      <li>"Customer not available" as 35 to 40% of NDRs (shipping.amazon.in, hillteck.com)</li>
+    </ul>
+    <p class="small muted">These come from vendor and blog sources. Use them only after checking the original data, or replace them with Zippyy's own numbers.</p>
+  </div>
+</section>
+
+
+<!-- PLAYBOOK -->
+<section id="playbook">
+  <div class="sh"><span class="eyebrow">Marketing playbook</span><h2>How the team should use this</h2><p class="muted">Rules for any ad, post, deck or landing page made before the site is fixed.</p></div>
+  <div class="rules">
+    <div class="rule"><b>Color</b><span>Ink or paper background, coral for the single call to action. No other hues.</span></div>
+    <div class="rule"><b>Type</b><span>Lato Bold headlines in sentence case, Inter for everything else. Nothing else.</span></div>
+    <div class="rule"><b>Logo</b><span>The coral logo as supplied, on ink or paper. Never recolor or stretch it.</span></div>
+    <div class="rule"><b>Imagery</b><span>Real product screens and the isometric logistics art. No stock photos, no clip-art.</span></div>
+    <div class="rule"><b>Name</b><span>Always "Zippyy". Never GoDash, never "Zippy AI".</span></div>
+    <div class="rule"><b>Landing page</b><span>Send paid traffic to /pricing/ or a clean campaign page, not the homepage, until week 1 fixes ship.</span></div>
+  </div>
+  <h3>Do and don't</h3>
+  <div class="ads">
+    <div class="ad do"><img class="ui" src="img/c_3pl.jpg" alt=""><div class="stack" style="gap:18px;position:relative"><img class="lg" src="logo.svg" alt="Zippyy"><span class="hd">Ship every order from one dashboard.</span><span class="sub">25+ couriers, COD in 24 to 48 hours, from ₹30 a shipment.</span></div><div class="ft"><button class="zb" type="button">Start free</button><span class="tag t-ok">Do</span></div></div>
+    <div class="ad dont"><span class="tag t-hi bad">Don't</span><div class="flags"><span>Rainbow gradient</span><span>Poppins</span><span>Unproven stat</span><span>Old brand name</span></div><div class="stack" style="gap:10px"><span class="hd">250M+ Shipments With GoDash AI-Native Agentic Platform</span><span class="sub">The Self-Sufficient Supply Chain Revolution Is Here</span></div><div class="ft"><span></span></div></div>
+  </div>
+  <h3>Claims ledger</h3>
+  <div class="ledger">
+    <div class="l-ok"><h4>Use now</h4><ul><li>Shipping from ₹30</li><li>25+ courier partners</li><li>Free plan, no card, no minimum term</li><li>COD in 24 to 48 hours</li><li>Zippyy Protect cover up to ₹50,000</li><li>Branded tracking from ₹1 per status</li></ul></div>
+    <div class="l-md"><h4>Confirm one number first</h4><ul><li>Carriers: 150+, 180+ or 190+</li><li>Clients: 100+ or 500</li><li>NDR: +45% or 50% quicker</li><li>Route optimization on 200+ constraints</li><li>Client logos (get written permission)</li></ul></div>
+    <div class="l-hi"><h4>Retire until sourced</h4><ul><li>250M+ shipments a month</li><li>$350M freight a month</li><li>850 KT carbon saved</li><li>4.6M SKUs handled</li><li>DTDC, Zepto, "a Fortune 100 exporter"</li><li>ISO 27001 and GDPR (stated as Shipsy's)</li></ul></div>
+  </div>
+  <h3>First 30 days</h3>
+  <div class="plan">
+    <div class="wk"><span class="w">Week 1 | Trust</span><ul><li>Remove Shipsy, GoDash, JMC, Superdope, Zippvy text</li><li>Switch support email to a zippyy.ai address</li><li>Hide the testimonial carousel</li><li>Replace the Shipsy-hosted image</li><li>Footer: drop "A GoDash Company" or explain it</li></ul></div>
+    <div class="wk"><span class="w">Week 2 | SEO</span><ul><li>One H1 per page, fix blog page "Brochures" heading</li><li>Rewrite titles and descriptions</li><li>PNG share image, alt text on all images</li><li>Fix blog dates and duplicate posts</li></ul></div>
+    <div class="wk"><span class="w">Week 3 | Brand</span><ul><li>Redraw Platform Hub and Advantage as live text</li><li>One icon set, drop Roboto, Manrope, DM Sans</li><li>Mobile: header, logo wall, demo band</li><li>Order mono and reversed logo files</li></ul></div>
+    <div class="wk"><span class="w">Week 4 | Proof</span><ul><li>Decide the lead story: D2C shipping or enterprise TMS</li><li>Rewrite the hero to match</li><li>Two real case studies with numbers</li><li>Three approved testimonials</li></ul></div>
+  </div>
+</section>
+
+<section id="tokens">
+  <div class="sh"><span class="eyebrow">Tokens</span><h2>Brand values for designers and developers</h2></div>
+  <div class="tok"><button type="button" id="copyTok">Copy</button><pre id="tokText">:root {
+  --zippyy-coral:      #D54029;  /* CTAs, one accent per view */
+  --zippyy-coral-logo: #F44E32;  /* logo only */
+  --zippyy-ink:        #121212;  /* dark bands, headings on light */
+  --zippyy-graphite:   #1E1E1E;  /* raised dark surfaces */
+  --zippyy-paper:      #FAFAFA;  /* light bands */
+  --zippyy-white:      #FFFFFF;  /* cards, text on dark */
+  --zippyy-text:       #2E2E2E;  /* body on light */
+  --zippyy-grid: linear-gradient(#ffffff0a 1px, transparent 1px), linear-gradient(90deg, #ffffff0a 1px, transparent 1px);
+
+  --font-heading: "Lato", sans-serif;   /* 700 only */
+  --font-body:    "Inter", sans-serif;  /* 400, 500, 600 */
+  --h1: 48px/1.15; --h2: 36px/1.2; --h3: 24px/1.3; --body: 16px/1.6; --button: 15px/1;
+
+  --radius-button: 6px; --radius-card: 12px; --button-padding: 12px 24px;
+}</pre></div>
+</section>
+
+<footer class="end"><span>Sources: live zippyy.ai pages captured 5 Oct 2026 at 1440px and 390px, site CSS and logo files, Google PageSpeed Insights, Tracxn, YourStory (June 2025).</span><span>Scores and positioning placements are assessments. Every issue in the tracker links to a page where it can be seen.</span></footer>
+</div>
+
+<script>
+const SEV={hi:['High','t-hi','p-hi'],md:['Medium','t-md','p-md'],lo:['Low','t-lo','p-lo'],ok:['Working','t-ok','p-ok']};
+
+/* desktop homepage annotations: y as % of the 6,999px capture */
+const DESK=[
+ {n:1,y:4,x:4,s:'ok',t:'Hero',d:'Clear single CTA and on-brand art. The headline is an H2, the page has no H1.',px:'0 to 583px'},
+ {n:2,y:11,x:4,s:'ok',t:'Client logo wall',d:'Real D2C brands. Add one line of results next to it.',px:'583px'},
+ {n:3,y:17.5,x:4,s:'md',t:'Why Zippyy',d:'Buzzword-heavy copy: "Agentic AI", "redefining how the world moves".',px:'1,046px'},
+ {n:4,y:25,x:4,s:'md',t:'TMS tabs',d:'Good tabbed layout. Stock delivery photo is the only photography on the page.',px:'1,434px'},
+ {n:5,y:34.5,x:4,s:'ok',t:'3PL tabs',d:'Real dashboard screenshot. Strongest proof on the page.',px:'2,160px'},
+ {n:6,y:45,x:4,s:'ok',t:'Sectors diagram',d:'Fully on brand. "Supply chain injections" is unclear wording.',px:'2,819px'},
+ {n:7,y:55.5,x:4,s:'hi',t:'Testimonials',d:'Placeholder avatars, first names only, quotes praise "GoDash". Same four cards repeat three times.',px:'3,532px'},
+ {n:8,y:67.5,x:4,s:'hi',t:'Platform Hub',d:'Rainbow gradients and Poppins text baked into one image.',px:'4,331px'},
+ {n:9,y:76.5,x:4,s:'md',t:'Zippyy Advantage',d:'Four clip-art PNGs with baked text, a third icon style.',px:'5,146px'},
+ {n:10,y:82.5,x:4,s:'hi',t:'Global scale stats',d:'250M+ shipments and $350M freight a month, no source. Labels fall back to Roboto.',px:'5,571px'},
+ {n:11,y:89,x:4,s:'md',t:'Demo band',d:'Good final CTA with two options.',px:'5,904px'},
+ {n:12,y:98.5,x:4,s:'hi',t:'Footer',d:'"© 2026 Zippyy - A GoDash Company".',px:'6,900px'}
+];
+const MOB=[
+ {n:1,y:1.2,x:9,s:'md',t:'Header',d:'Logo shrinks to about 50px, menu icon drops under it.'},
+ {n:2,y:10.5,x:9,s:'md',t:'Logo wall',d:'Logos cut off at both screen edges.'},
+ {n:3,y:33,x:9,s:'md',t:'3PL block',d:'Heading and tabs right-aligned, awkward to read.'},
+ {n:4,y:66,x:9,s:'hi',t:'Advantage',d:'Four images take 1,547px, about two screens of scrolling.'},
+ {n:5,y:84,x:9,s:'md',t:'Demo band',d:'Headline splits into four lines.'},
+ {n:6,y:99,x:9,s:'hi',t:'Footer',d:'"A GoDash Company" on the last screen.'}
+];
+function pins(el,list){list.forEach(p=>{const s=document.createElement('span');s.className='pin '+SEV[p.s][2];s.style.left=p.x+'%';s.style.top=p.y+'%';s.textContent=p.n;s.title=p.t;el.appendChild(s)})}
+function legend(el,list){el.innerHTML=list.map(p=>`<div class="lg"><span class="pin ${SEV[p.s][2]}">${p.n}</span><div><h4>${p.t} <span class="tag ${SEV[p.s][1]}">${SEV[p.s][0]}</span>${p.px?`<span class="y">${p.px}</span>`:''}</h4><p>${p.d}</p></div></div>`).join('')}
+pins(document.getElementById('deskAnnot'),DESK);legend(document.getElementById('deskLegend'),DESK);
+pins(document.getElementById('mobAnnot'),MOB);legend(document.getElementById('mobLegend'),MOB);
+
+/* sitemap tree */
+const F={hi:'t-hi',md:'t-md',lo:'t-lo',ok:'t-ok'};
+const TREE=[
+ ['Solutions',[['Transportation Management System',[['hi','Shipsy'],['hi','Superdope FAQ']]],['3PL Management',[]],['Route Optimization',[['md','Repeated copy']]],['Intelligence (Metis AI)',[]],['B2B | B2C | International',[]],['ZipDash',[['hi','Superdope FAQ'],['md','No H1']]],['Zippyy Protect',[]]]],
+ ['Post-purchase',[['NDR Suite',[['md','45% vs 50%']]],['Early COD',[['hi','Superdope FAQ'],['md','Stray text']]],['Delivery Notification',[]],['Brand Tracking',[]],['Pre-order Suite',[]],['Carrier | Channel integration',[]]]],
+ ['Resources',[['Blog',[['hi','Titled Brochures'],['md','2022 dates']]],['Brochures',[]],['Case studies',[['md','Links only']]],['Videos',[]]]],
+ ['Company',[['About us',[['md','Godash investors'],['hi','Superdope FAQ']]],['Careers',[['hi','JMC Japan']]],['Partner with us',[['hi','Shipsy'],['md','Zippvy']]],['Our customers',[['hi','Shipsy'],['md','1 story']]],['Contact',[['md','godash email']]],['Pricing',[['md','5 H1s'],['hi','Superdope FAQ']]]]]
+];
+document.getElementById('tree').innerHTML=TREE.map(([h,leaves])=>`<div class="branch"><h4>${h}</h4>${leaves.map(([n,f])=>`<div class="leaf"><span>${n}</span><span class="row" style="gap:4px;justify-content:flex-end">${f.length?f.map(([s,t])=>`<span class="flag ${F[s]}">${t}</span>`).join(''):'<span class="flag t-ok">Clean</span>'}</span></div>`).join('')}</div>`).join('');
+
+/* scorecard */
+const SCORES=[
+ ['Visual identity',6,'Strong coral and ink core, ownable Z mark. Diluted by rainbow graphics, clip-art and seven fonts.'],
+ ['Website design and UX',5,'Clear section rhythm on desktop. Mobile has layout breaks and an 11-screen homepage.'],
+ ['Positioning and messaging',3,'Two different businesses on one site. Benefits buried under AI buzzwords.'],
+ ['Trust and proof',2,'Competitor and old-brand names in live copy, placeholder testimonials, unsourced stats.'],
+ ['Blog and content',2,'Dated before the company existed, brand misspelled, near-duplicate posts.'],
+ ['SEO',3,'Crawlable and fast on desktop. 43 of 44 pages lack a description, 30 lack an H1, mobile loads in 11 s, share images broken.']
+];
+const col=v=>v>=6?'#2f8f5b':v>=4?'#c78a12':'#c0321f';
+document.getElementById('scorecard').innerHTML=SCORES.map(([h,v,d])=>`<div class="sc"><h4>${h}</h4><span class="scv num">${v}<small> / 10</small></span><div class="meter"><i style="width:${v*10}%;background:${col(v)}"></i></div><p>${d}</p></div>`).join('');
+
+/* tracker */
+const ISSUES=[
+ ['Trust','hi','"Shipsy" named in live copy','TMS, Our customers, Partner pages','Rewrite the three paragraphs in Zippyy\'s own words','Web + Marketing'],
+ ['Trust','hi','Homepage image loads from shipsy.prophecius.in','Homepage','Upload the image to zippyy.ai or remove it','Web'],
+ ['Trust','hi','Testimonials name "GoDash", grey avatars, first names only','Homepage','Hide now, replace with approved quotes','Marketing'],
+ ['Trust','hi','Footer reads "A GoDash Company"','Every page','Remove, or add a one-line rebrand note on About','Leadership'],
+ ['Trust','hi','Unsourced scale stats (250M+, $350M, 850 KT, 4.6M)','Homepage','Remove or source each number','Leadership'],
+ ['Trust','hi','"JMC (Japan Marketing & Consultancy Limited)" on Careers','Careers','Rewrite the culture paragraph','Marketing'],
+ ['Trust','hi','"Superdope" FAQ heading and off-topic freight FAQ','18 pages incl. Pricing, TMS, About','Write a real FAQ per page','Marketing'],
+ ['Trust','hi','ISO 27001 and GDPR claimed in Shipsy\'s name','Partner page','Remove unless Zippyy holds them','Leadership'],
+ ['Trust','md','Support email is support@godash.ai','Contact, footer FAQ','Use a zippyy.ai address','Web'],
+ ['Trust','md','Phone shown as "+04049171779", office has no city','Contact','Format +91 40 4917 1779, add Hyderabad','Web'],
+ ['Trust','md','Clients named in copy (DTDC, Zepto, Fortune 100) look borrowed','Careers','Remove unless confirmed','Marketing'],
+ ['Positioning','hi','Homepage sells enterprise AI, pricing sells a ₹30 aggregator','Home vs Pricing','Pick the lead story, give the other its own path','Leadership'],
+ ['Positioning','md','Client count 100+ vs 500, carriers 25+ to 190+','Partner, Customers, Pricing, Home','One sourced number per claim','Marketing'],
+ ['Positioning','md','NDR and Early COD results differ between nav and page','Nav, NDR, Early COD','Align to one figure','Marketing'],
+ ['Positioning','md','Buzzword headlines bury concrete benefits','Homepage','Lead with RTO, COD and cost outcomes','Marketing'],
+ ['Brand','hi','Brand spelled Zippyy, Zippy, Zippvy, Zippyy Ai','Meta, blog, partner, title tags','Find and replace site-wide','Web'],
+ ['Brand','hi','Platform Hub uses six rainbow gradients','Homepage','Redraw in the Sectors style','Design'],
+ ['Brand','md','Advantage icons are multicolor clip-art PNGs','Homepage','One icon set, live text','Design'],
+ ['Brand','md','Seven typefaces (Lato, Inter, Poppins, Roboto, Manrope, DM Sans, system)','Site-wide','Keep Lato and Inter only','Web'],
+ ['Brand','md','Lato set at 500 and 600, which do not exist on Google Fonts','Site-wide','Use 400 and 700','Web'],
+ ['Brand','md','Only one logo file, no mono or reversed version','Brand assets','Commission logo variants','Design'],
+ ['Brand','lo','Blue scroll-to-top button and leftover theme blues','Site-wide','Set theme globals to brand colors','Web'],
+ ['Brand','lo','Stock delivery photo is off-style','Homepage TMS tab','Swap for product UI or isometric art','Design'],
+ ['UX','md','Mobile header: logo tiny, menu icon misplaced','Mobile, every page','Logo left, menu right, 64px bar','Web'],
+ ['UX','md','Mobile logo wall clipped at screen edges','Mobile homepage','Add side padding or a 2-column grid','Web'],
+ ['UX','hi','Mobile Advantage block takes 1,547px','Mobile homepage','2x2 grid with small icons','Web'],
+ ['UX','md','Mobile demo headline splits into four lines','Mobile homepage','Shorter headline, remove forced breaks','Web'],
+ ['UX','md','3PL block right-aligned on mobile','Mobile homepage','Left-align on small screens','Web'],
+ ['UX','lo','Testimonial carousel repeats the same four cards three times','Homepage','Show each card once','Web'],
+ ['Content','md','Typos: "Remettence", "GGlobal", "waywe"','Pricing, blog, homepage','Proofread pass','Marketing'],
+ ['Content','md','Product pages repeat the Route Optimization impact line','Product pages','Write impact per product','Marketing'],
+ ['Content','md','Case studies are four brochure links, no story','Case studies','Two written case studies with numbers','Marketing'],
+ ['UX','hi','"See live" demo button opens the app login page','Every page footer','Link to a recorded demo or booking page','Web'],
+ ['UX','md','Footer "Videos" link goes to #','Every page footer','Add a video page or remove the link','Web'],
+ ['Trust','md','Meeting link is calendly.com/rohan-godash with month=2025-12 fixed','Every page footer','Zippyy-named booking link, no fixed month','Sales'],
+ ['SEO','hi','Meta description missing on 43 of 44 pages','Every page except home','Write a 120 to 160 character description per page','Marketing'],
+ ['SEO','hi','No H1 on 30 pages, homepage hero is an H2, pricing has five','Site-wide','One H1 per page, menu headings to plain text','Web'],
+ ['SEO','md','Titles too short (20) or too long (12); homepage reads "-Zippyy Ai"','Site-wide','Keyword first, end with "| Zippyy AI"','Marketing'],
+ ['SEO','md','Share image is http on 35 pages, SVG on home and pricing','Site-wide','1200 x 630 PNG on https','Design + Web'],
+ ['SEO','md','Mobile largest paint 11.0 s, 582 KB of scripts','Homepage','Remove popup script, compress the 1.3 MB PNG','Web'],
+ ['SEO','md','66 http asset links, sitemap and robots point to http','Site-wide','Search and replace to https','Web'],
+ ['SEO','lo','No Organization or SoftwareApplication schema','Site-wide','Add with logo, socials, pricing','Web'],
+ ['SEO','lo','1,414 of 1,620 images have empty alt text','Site-wide','Describe content images','Marketing'],
+ ['SEO','lo','1 broken link, 6 orphan pages, header and footer URLs in sitemap','Blog, integrations','Fix link, link the pages, drop from sitemap','Web'],
+ ['Blog','hi','Shiprocket post copied from Shipway, brand spelled "Zeppy"','Alternative to Ship Rocket post','Unpublish, rewrite from own pricing','Marketing'],
+ ['Blog','hi','Dates: Aug 2022 on cards, May 2025 in posts, Dec 2025 in code','All posts','One real publish date per post','Web'],
+ ['Blog','md','Five near-identical India UK posts and three RTO posts','Blog','Merge into two guides, redirect the rest','Marketing'],
+ ['Blog','md','Every post ends with an RTO box pointing to www.zippy.ai','All posts','Relevant product CTA per post','Marketing'],
+ ['Blog','md','Blog page heading reads "Brochures", no H1','/blog/','Rename to Blog, add H1','Web'],
+ ['Blog','md','Empty iThink post published, index card link 404s','Blog','Unpublish or write it, fix links','Web'],
+ ['Blog','md','Posts never link to product pages','All posts','Two product links per post','Marketing'],
+ ['Blog','lo','Author is a first name only, no bio','All posts','Add author page and bio','Marketing']
+];
+window.ZISSUES=ISSUES;
+function renderTracker(){
+ const aOn=[...document.querySelectorAll('#fArea .chip[aria-pressed="true"]')].map(b=>b.dataset.v);
+ const sOn=[...document.querySelectorAll('#fSev .chip[aria-pressed="true"]')].map(b=>b.dataset.v);
+ const rows=window.ZISSUES.map((r,i)=>({r,id:'Z'+String(i+1).padStart(2,'0')})).filter(({r})=>(aOn.includes('all')||aOn.includes(r[0]))&&(sOn.includes('all')||sOn.includes(r[1])));
+ document.getElementById('trkBody').innerHTML=rows.map(({r,id})=>`<tr><td>${id}</td><td><span class="tag ${SEV[r[1]][1]}">${SEV[r[1]][0]}</span></td><td><b>${r[2]}</b><span class="area">${r[0]}</span></td><td>${r[3]}</td><td>${r[4]}</td><td>${r[5]}</td></tr>`).join('');
+ document.getElementById('trkCount').textContent=`Showing ${rows.length} of ${window.ZISSUES.length} issues`;
+}
+function chips(el,vals){vals.forEach(([v,l])=>{const b=document.createElement('button');b.type='button';b.className='chip';b.dataset.v=v;b.textContent=l;b.setAttribute('aria-pressed',v==='all'?'true':'false');
+ b.addEventListener('click',()=>{const all=el.querySelector('[data-v="all"]');if(v==='all'){el.querySelectorAll('.chip').forEach(c=>c.setAttribute('aria-pressed',c===b?'true':'false'))}else{b.setAttribute('aria-pressed',b.getAttribute('aria-pressed')==='true'?'false':'true');all.setAttribute('aria-pressed','false');if(![...el.querySelectorAll('.chip')].some(c=>c.getAttribute('aria-pressed')==='true'))all.setAttribute('aria-pressed','true')}renderTracker()});el.appendChild(b)})}
+function initTracker(){
+ const areas=[...new Set(window.ZISSUES.map(r=>r[0]))];
+ chips(document.getElementById('fArea'),[['all','All'],...areas.map(a=>[a,a])]);
+ chips(document.getElementById('fSev'),[['all','All'],['hi','High'],['md','Medium'],['lo','Low']]);
+ renderTracker();
+ document.getElementById('kpiIssues').textContent=window.ZISSUES.length;
+ document.getElementById('kpiHigh').textContent=window.ZISSUES.filter(r=>r[1]==='hi').length;
+}
+initTracker();
+
+
+/* strategy data */
+const GAP=[
+ ['Pricing page','ok','Have','Four plans in rupees, free tier'],
+ ['Tracking site','ok','Have','track.zippyy.ai'],
+ ['Carrier and channel pages','md','Weak','Exist, but no partner logos and orphaned in links'],
+ ['Case studies','md','Weak','Four brochure links, no written story or numbers'],
+ ['Testimonials','hi','Missing','Placeholders praising GoDash'],
+ ['Product demo video','hi','Missing','"Videos" link goes to #'],
+ ['Live demo','hi','Missing','"See live" opens the login page'],
+ ['Security and compliance page','hi','Missing','/security/ returns 404'],
+ ['Help center or docs','md','Missing','/help/ and /docs/ return 404'],
+ ['API docs','md','Missing','No developer page found'],
+ ['Integrations directory','md','Missing','No logo grid of couriers and channels'],
+ ['Comparison pages','md','Missing','Only a copied blog post vs Shiprocket'],
+ ['Rate calculator','md','Missing','Common free tool in this category'],
+ ['Review badges','md','Missing','No G2, Capterra or Trustpilot shown'],
+ ['Founder and team story','md','Weak','About page lists GoDash investors'],
+ ['Press page','lo','Missing','YourStory coverage not shown anywhere'],
+ ['Newsletter or webinars','lo','Missing','No owned audience capture'],
+ ['WhatsApp contact','lo','Missing','The channel D2C founders use most']
+];
+const GC={ok:'t-ok',md:'t-md',hi:'t-hi',lo:'t-lo'};
+document.getElementById('gapmap').innerHTML=GAP.map(([n,s,l,d])=>`<div class="gm"><b>${n}</b><span class="tag ${GC[s]}">${l}</span><small>${d}</small></div>`).join('');
+const JR=[
+ ['1 | Discover','Find Zippyy','#c0321f',25,'LinkedIn and blog. Blog tells five different stories, Facebook still says GoDash.','Fix: three content pillars, consistent handles'],
+ ['2 | Understand','Get what it does','#c78a12',45,'Homepage says enterprise AI, pricing says ₹30 aggregator.','Fix: one D2C-first homepage story'],
+ ['3 | Trust','Believe it works','#c0321f',20,'Competitor names, GoDash testimonials, unsourced stats.','Fix: named case studies, real reviews'],
+ ['4 | Decide','Try or talk','#2f8f5b',70,'Free plan and public pricing are strong. "See live" goes to login.','Fix: real demo link, product video']
+];
+document.getElementById('journey').innerHTML=JR.map(([n,h,c,v,p,f])=>`<div class="stage"><span class="n">${n}</span><h4>${h}</h4><div class="sbar" style="background:linear-gradient(90deg,${c} ${v}%,var(--wash2) ${v}%)"></div><p>${p}</p><p class="fix">${f}</p></div>`).join('');
+const MX=[
+ ['Remove competitor and GoDash text',6,10,1],['Fix demo, video and Calendly links',6,22,1],['Titles, descriptions, H1s',20,34,1],['Hide unverified stats',6,40,1],
+ ['D2C-first homepage rewrite',30,16,0],['Named case studies',56,12,0],['Social program',33,28,0],['Redraw off-brand graphics',22,62,0],
+ ['Rate calculator and RTO checker',72,24,0],['Comparison pages',56,36,0],['Logo suite',8,74,0],['Enterprise TMS track',72,62,0]
+];
+document.getElementById('mxdots').innerHTML=MX.map(([t,x,y,n])=>`<span class="mxd${n?' now':''}" style="left:${x}%;top:${y+4}%"><i></i>${t}</span>`).join('');
+
+
+/* social data */
+const POSTS=[
+ [1,'Brand intro','Brand','Pin as the first post. Says what Zippyy is in one look.','Zippyy is the shipping platform for Indian D2C brands. Ship with 25+ couriers from one dashboard, cut failed deliveries with AI address checks and get COD back in 24 to 48 hours. Start free at zippyy.ai','#D2CIndia #EcommerceIndia #ShippingSolutions #Logistics'],
+ [2,'Early COD','Product proof','Speed proof no competitor shows.','Cash on delivery should not mean cash in two weeks. With Early COD, your remittance lands 24 to 48 hours after delivery. Turn it on from your Zippyy dashboard.','#COD #D2CBrands #CashFlow #EcommerceIndia'],
+ [3,'AI address calls','Product proof','Explains the AI in plain steps.','Many failed deliveries come down to a wrong address or a customer who is not home. Zippyy\'s AI calls your customer to confirm the address and delivery time before the courier arrives.','#RTO #NDR #D2CIndia #AIinLogistics'],
+ [4,'Pricing','Product proof','The price anchor nobody in the category posts.','Shipping from ₹30 per shipment, 25+ courier partners and a free plan with no credit card. Paid plans start at ₹199 a month, and the fee comes back once you hit your shipment target.','#ShippingRates #SmallBusinessIndia #D2CBrands'],
+ [5,'Branded tracking','Product proof','Real product screen as the hero.','Your customers should see your brand, not the courier\'s. Zippyy gives you branded tracking pages from ₹1 per status update.','#CustomerExperience #D2CBrands #Ecommerce'],
+ [6,'Myth vs fact','Seller pain','Saves and shares from ops teams.','RTO is not just the price of offering COD. Wrong addresses and unreachable customers can both be checked before the courier arrives. Save this for your ops team.','#RTO #COD #EcommerceTips'],
+ [7,'Festive checklist','Festive moment','Post by mid-October, ahead of the Diwali peak.','Four things to switch on before the Diwali rush: address checks, WhatsApp NDR follow-ups, a backup courier per pincode and Early COD. Save this and share it with your ops lead.','#Diwali2026 #FestiveSale #D2CIndia'],
+ [8,'Zippyy Protect','Product proof','Removes a fear that blocks switching.','Lost or damaged parcels happen. Zippyy Protect covers each shipment up to ₹50,000 with digital claims, so one bad delivery does not wipe out a week of margin.','#ShippingInsurance #D2CBrands'],
+ [9,'Customer story','Customer proof','Template for the case-study series.','Use only with a named customer\'s written approval and their real numbers. Lead with the result, then the quote.','#CustomerStory #D2CIndia'],
+ [10,'Seller math 01','Seller pain series','Starts a numbered series people follow.','Every RTO costs you shipping twice and earns you nothing. Seller Math is a new series on the numbers behind D2C shipping. Follow for part 02 on COD remittance.','#SellerMath #RTO #D2CIndia'],
+ [11,'Address hook','Seller pain','Hinglish hook, shareable, ties to AI calls.','“Temple ke paas” works for your friends. It does not work for a courier. Zippyy’s AI calls confirm addresses and delivery times before the courier arrives.','#D2CIndia #EcommerceIndia #RTO'],
+ [12,'Weight disputes','Seller pain','Hidden-cost reveal, a pain every seller knows.','Couriers sometimes bill a heavier weight than you shipped. Zippyy compares billed and packed weight and raises the dispute for you.','#WeightDispute #ShippingCosts #D2CBrands']
+];
+document.getElementById('iggrid').innerHTML=POSTS.map(p=>`<img src="img/social/t${p[0]}.jpg" alt="Post ${p[0]}: ${p[1]}">`).join('');
+document.getElementById('posts').innerHTML=POSTS.map(([n,t,pil,goal,cap,hash])=>`<div class="pc"><img src="img/social/p${n}.jpg" alt="Post ${n}: ${t}"><div class="stack" style="gap:10px"><div class="meta2"><span class="tag t-lo">${String(n).padStart(2,'0')}</span><span class="tag ${pil==='Festive moment'?'t-md':pil.startsWith('Seller')?'t-hi':'t-ok'}">${pil}</span></div><h4>${t}</h4><p class="goal">${goal}</p><div class="cap">${cap}</div><span class="hash">${hash}</span></div></div>`).join('');
+const MIX=[['Seller pain and tips',30],['Product proof',25],['Customer stories',15],['Festive and calendar moments',15],['Comparisons, myth vs fact',10],['Team and hiring',5]];
+document.getElementById('mix').innerHTML=MIX.map(([l,v])=>`<div class="bar"><span>${l}</span><span class="tr"><i style="width:${v*3}%"></i></span><b class="num">${v}%</b></div>`).join('');
+const CAL=[['Week 1',[1,2,3,7]],['Week 2',[11,4,6,10]],['Week 3',[5,12,8,9]]];
+document.getElementById('cal').innerHTML='<span class="h"></span>'+['Mon','Wed','Fri','Sat'].map(d=>`<span class="h">${d}</span>`).join('')+CAL.map(([w,ids])=>`<span class="wkl">${w}</span>`+ids.map(i=>{const p=POSTS[i-1];return `<div class="slot"><img src="img/social/t${i}.jpg" alt=""><div><b>${p[1]}</b><small>${p[2]}</small></div></div>`}).join('')).join('');
+
+/* seo charts */
+const G=[['Mobile performance',57],['Desktop performance',95],['Accessibility',94],['Best practices',96],['SEO (homepage only)',100]];
+const gcol=v=>v>=90?'#2f8f5b':v>=50?'#c78a12':'#c0321f';
+document.getElementById('gauges').innerHTML=G.map(([l,v])=>{const c=2*Math.PI*40,off=c*(1-v/100);return `<div class="gauge"><svg viewBox="0 0 100 100" aria-label="${l} ${v}"><circle cx="50" cy="50" r="40" fill="none" stroke="var(--wash2)" stroke-width="9"/><circle cx="50" cy="50" r="40" fill="none" stroke="${gcol(v)}" stroke-width="9" stroke-linecap="round" stroke-dasharray="${c}" stroke-dashoffset="${off}" transform="rotate(-90 50 50)"/><text x="50" y="57" text-anchor="middle" font-family="Lato" font-weight="900" font-size="24" fill="var(--ink)">${v}</text></svg><b>${l}</b><small>Lighthouse, lab run</small></div>`}).join('');
+const CWV=[['Largest paint (LCP)',11.0,2.5,'s'],['First paint (FCP)',6.4,1.8,'s'],['Speed index',6.4,3.4,'s'],['Blocking time (TBT)',180,200,' ms'],['Layout shift (CLS)',0.026,0.1,'']];
+document.getElementById('cwv').innerHTML=CWV.map(([l,v,t,u])=>{const max=Math.max(v,t)*1.15,ok=v<=t;return `<div class="bar"><span>${l}</span><span class="tr" style="position:relative"><i style="width:${v/max*100}%;background:${ok?'#2f8f5b':'#c0321f'}"></i><em style="position:absolute;top:-3px;bottom:-3px;left:${t/max*100}%;width:2px;background:var(--ink)" title="Target"></em></span><b class="num">${v}${u}</b></div>`}).join('')+'<p class="small muted">Black tick is Google\'s "good" threshold. Red is over target.</p>';
+const COV=[['No meta description',43],['GoDash in footer',44],['No H1',30],['Share image on http',35],['Title too short or long',32],['Superdope FAQ text',18],['"Zippy" misspelling',30]];
+document.getElementById('cover').innerHTML=COV.map(([l,v])=>`<div class="bar"><span>${l}</span><span class="tr"><i style="width:${v/44*100}%"></i></span><b class="num">${v}/44</b></div>`).join('');
+
+/* active tab */
+const links=[...document.querySelectorAll('nav.tabs a')];
+const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){links.forEach(l=>l.classList.toggle('on',l.getAttribute('href')==='#'+e.target.id))}})},{rootMargin:'-45% 0px -50% 0px'});
+document.querySelectorAll('section[id]').forEach(s=>io.observe(s));
+
+document.getElementById('copyTok').addEventListener('click',e=>{const t=document.getElementById('tokText').innerText,b=e.currentTarget;navigator.clipboard.writeText(t).then(()=>{b.textContent='Copied';setTimeout(()=>b.textContent='Copy',1600)}).catch(()=>{const r=document.createRange();r.selectNodeContents(document.getElementById('tokText'));const s=getSelection();s.removeAllRanges();s.addRange(r);b.textContent='Selected, press Cmd+C'})});
+</script>
+
+</body>
+</html>
